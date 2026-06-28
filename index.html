@@ -1,367 +1,157 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>The Logbook</title>
-<style>
-body{margin:0;background:#090b09;color:#f3f1e8;font-family:-apple-system,Arial,sans-serif}
-header{padding:16px;border-bottom:1px solid #333;background:#090b09;position:sticky;top:0}
-h1{margin:0}.sub{color:#aaa;font-size:13px}
-.card{background:#151a15;border:1px solid #333;border-radius:16px;padding:14px;margin:12px}
-button{background:#7f9b4e;border:0;border-radius:12px;padding:13px;font-weight:800;width:100%;margin:6px 0}
-.secondary{background:#20271f;color:#f3f1e8;border:1px solid #333}
-.danger{background:#d86d61}
-input,textarea,select{width:100%;box-sizing:border-box;padding:10px;margin:6px 0 12px;background:#050705;color:white;border:1px solid #333;border-radius:10px;font-size:16px}
-textarea{min-height:80px}
-.hide{display:none}
-.grid,.row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.pill{display:inline-block;border:1px solid #444;border-radius:999px;padding:5px 8px;margin:3px;color:#aaa;font-size:12px}
-.stat{display:flex;justify-content:space-between;border-bottom:1px solid #333;padding:8px 0}
-.nav{position:fixed;bottom:0;left:0;right:0;display:grid;grid-template-columns:repeat(5,1fr);background:#111;border-top:1px solid #333}
-.nav button{background:#111;color:#aaa;border-radius:0;font-size:11px}
-main{padding-bottom:80px}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#080a08">
+  <title>The Logbook by 2° Baits</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <header>
-<h1>🎣 THE LOGBOOK</h1>
-<div class="sub">by 2° Baits · Every cast teaches something.</div>
+  <h1>🎣 THE LOGBOOK</h1>
+  <div class="sub">by 2° Baits · Every cast teaches something.</div>
 </header>
 
 <main>
-<div id="home" class="card">
-<h2>Dashboard</h2>
-<div id="stats"></div>
-<h3>Chief's Report</h3>
-<p id="chief">Save a trip and Chief will start finding patterns.</p>
-<div class="grid">
-<button onclick="show('trip')">Start Trip</button>
-<button class="secondary" onclick="show('history')">History</button>
-<button class="secondary" onclick="show('performance')">Performance</button>
-<button class="secondary" onclick="show('trophy')">Trophy Room</button>
-<button class="secondary" onclick="show('vault')">Lure Vault</button>
-<button class="secondary" onclick="show('patterns')">Pattern Map</button>
-</div>
-</div><div id="trip" class="card hide">
-<h2>New Trip</h2>
+  <section id="home" class="screen active">
+    <div class="card">
+      <h2>Dashboard</h2>
+      <div id="dashboard"></div>
+    </div>
+    <div class="grid">
+      <button data-go="trip">Start Trip</button>
+      <button class="secondary" data-go="history">History</button>
+      <button class="secondary" data-go="performance">Performance</button>
+      <button class="secondary" data-go="trophy">Trophy Room</button>
+      <button class="secondary" data-go="vault">Lure Vault</button>
+      <button class="secondary" data-go="patterns">Pattern Map</button>
+    </div>
+    <div class="card">
+      <h3>Chief's Report</h3>
+      <div id="chief" class="small"></div>
+    </div>
+  </section>
 
-<label>Date</label>
-<input id="date" type="date">
+  <section id="trip" class="screen">
+    <div class="card">
+      <h2>New Trip</h2>
+      <label>Date</label><input id="date" type="date">
+      <label>Body of Water</label><input id="lake" placeholder="Kunkel Lake">
+      <label>Spot / Area</label><input id="spot" placeholder="North grass flat / east riprap">
 
-<label>Body of Water</label>
-<input id="lake" placeholder="Kunkel Lake">
+      <div class="row">
+        <div><label>Water Temp</label><input id="waterTemp" placeholder="72"></div>
+        <div><label>Air Temp</label><input id="airTemp" placeholder="82"></div>
+      </div>
 
-<label>Spot / Area</label>
-<input id="spot" placeholder="North grass flat">
+      <div class="row">
+        <div><label>Water Clarity</label><select id="clarity"><option>Clear</option><option>Gin clear</option><option>Stained</option><option>Muddy</option></select></div>
+        <div><label>Sky</label><select id="sky"><option>Sunny</option><option>Partly cloudy</option><option>Cloudy</option><option>Rain</option><option>Night</option></select></div>
+      </div>
 
-<div class="row">
-<div>
-<label>Water Clarity</label>
-<select id="clarity">
-<option>Clear</option>
-<option>Gin clear</option>
-<option>Stained</option>
-<option>Muddy</option>
-</select>
-</div>
+      <div class="row">
+        <div><label>Cover</label><select id="cover"><option>Grass</option><option>Riprap</option><option>Wood</option><option>Dock</option><option>Open water</option><option>Mixed</option></select></div>
+        <div><label>Grass Type</label><select id="grass"><option>None</option><option>Hydrilla</option><option>Milfoil</option><option>Coontail</option><option>Mixed</option></select></div>
+      </div>
 
-<div>
-<label>Cover</label>
-<select id="cover">
-<option>Grass</option>
-<option>Hydrilla</option>
-<option>Milfoil</option>
-<option>Wood</option>
-<option>Rock</option>
-<option>Docks</option>
-</select>
-</div>
-</div>
+      <h3>Lure Setup</h3>
+      <label>Lure</label><input id="lure" placeholder="Mini">
+      <div class="row">
+        <div><label>Weight</label><input id="weight" placeholder="3/8 oz"></div>
+        <div><label>Color</label><input id="color" placeholder="Green pumpkin"></div>
+      </div>
+      <div class="row">
+        <div><label>Trailer</label><input id="trailer" placeholder="3.5 Icon"></div>
+        <div><label>Blade</label><input id="blade" placeholder="Small coffin"></div>
+      </div>
+      <div class="row">
+        <div><label>Rod</label><input id="rod" placeholder="Lew's TP3 6'10 MH Mod"></div>
+        <div><label>Line</label><input id="line" placeholder="15 lb fluoro"></div>
+      </div>
 
-<h3>Lure Setup</h3>
+      <h3>Trip Totals</h3>
+      <div class="row">
+        <div><label>Bites</label><input id="bites" type="number" value="0"></div>
+        <div><label>Landed</label><input id="landed" type="number" value="0"></div>
+      </div>
+      <div class="row">
+        <div><label>Lost</label><input id="lost" type="number" value="0"></div>
+        <div><label>Biggest</label><input id="biggest" placeholder="2.4 lb"></div>
+      </div>
 
-<label>Lure</label>
-<input id="lure" placeholder="2° Workhorse">
+      <h3>Fish Entries</h3>
+      <div id="fishEntries"></div>
+      <button class="secondary" id="addFishBtn">+ Add Fish</button>
 
-<div class="row">
-<div>
-<label>Weight</label>
-<input id="weight" placeholder="1/2 oz">
-</div>
+      <h3>Performance</h3>
+      <div class="row">
+        <div><label>Confidence 1-10</label><input id="confidence" type="number" min="1" max="10" value="8"></div>
+        <div><label>Grass Clearance 1-10</label><input id="grassScore" type="number" min="1" max="10" value="8"></div>
+      </div>
+      <div class="row">
+        <div><label>Hookups 1-10</label><input id="hookups" type="number" min="1" max="10" value="8"></div>
+        <div><label>Action / Hunt 1-10</label><input id="hunting" type="number" min="1" max="10" value="8"></div>
+      </div>
 
-<div>
-<label>Color</label>
-<input id="color" placeholder="Green Pumpkin">
-</div>
-</div>
+      <label class="check"><input id="fishAgain" type="checkbox" checked>Would fish this exact setup again</label>
+      <label>Lesson Learned</label><input id="lesson" placeholder="What did this trip teach you?">
+      <label>Notes</label><textarea id="notes"></textarea>
+      <button id="saveTrip">Save Trip</button>
+    </div>
+  </section>
 
-<div class="row">
-<div>
-<label>Trailer</label>
-<input id="trailer" placeholder="Spunk Shad">
-</div>
+  <section id="history" class="screen"><div class="card"><h2>Trip History</h2><input id="search" placeholder="Search lake, lure, notes..."><div id="historyList"></div></div></section>
+  <section id="performance" class="screen"><div class="card"><h2>Performance</h2><div id="performanceList"></div></div></section>
+  <section id="trophy" class="screen"><div class="card"><h2>Trophy Room</h2><p class="small">Fish entries sorted by weight.</p><div id="trophyList"></div></div></section>
 
-<div>
-<label>Blade</label>
-<input id="blade" placeholder="Small Coffin">
-</div>
-</div>
+  <section id="vault" class="screen">
+    <div class="card">
+      <h2>Lure Vault</h2>
+      <label>Lure Name</label><input id="vName" placeholder="Mini">
+      <label>Status</label><select id="vStatus"><option>Production</option><option>Prototype</option><option>Retired</option></select>
+      <label>Notes / Version History</label><textarea id="vNotes" placeholder="Blade, hook, skirt, trailer keeper, changes..."></textarea>
+      <button id="saveLure">Save Lure</button>
+    </div>
+    <div class="card"><h3>Saved Lures</h3><div id="vaultList"></div></div>
+  </section>
 
-<div class="row">
-<div>
-<label>Bites</label>
-<input id="bites" type="number" value="0">
-</div>
+  <section id="patterns" class="screen">
+    <div class="card spot">
+      <h2>Pattern Map</h2>
+      <p class="small">Track places each bait should excel on each body of water.</p>
+      <label>Lake</label><input id="pLake" placeholder="Kunkel Lake">
+      <label>Spot</label><input id="pSpot" placeholder="North weed flat">
+      <div class="row">
+        <div><label>Best Lure</label><input id="pBest" placeholder="Mini"></div>
+        <div><label>Backup Lure</label><input id="pBackup" placeholder="Workhorse"></div>
+      </div>
+      <label>Why it should excel there</label><textarea id="pWhy" placeholder="Clear water, grass edge, pressured fish..."></textarea>
+      <button id="savePattern">Save Pattern Spot</button>
+    </div>
+    <div class="card"><h3>Saved Spots</h3><div id="patternList"></div></div>
+  </section>
 
-<div>
-<label>Landed</label>
-<input id="landed" type="number" value="0">
-</div>
-</div>
-
-<div class="row">
-<div>
-<label>Lost</label>
-<input id="lost" type="number" value="0">
-</div>
-
-<div>
-<label>Biggest Fish</label>
-<input id="biggest" placeholder="4.75">
-</div>
-</div>
-
-<label>Lesson Learned</label>
-<input id="lesson" placeholder="What did this trip teach you?">
-
-<label>Notes</label>
-<textarea id="notes"></textarea>
-
-<button onclick="saveTrip()">Save Trip</button>
-</div><div id="history" class="card hide">
-<h2>Trip History</h2>
-<input id="search" placeholder="Search lake, lure, notes..." oninput="render()">
-<div id="list"></div>
-</div>
-
-<div id="performance" class="card hide">
-<h2>Performance</h2>
-<div id="perf"></div>
-</div>
-
-<div id="trophy" class="card hide">
-<h2>Trophy Room</h2>
-<p>Best fish entries and biggest catches will show here.</p>
-<div id="trophyList"></div>
-</div><div id="vault" class="card hide">
-<h2>Lure Vault</h2>
-
-<label>Lure Name</label>
-<input id="vname" placeholder="Mini">
-
-<label>Status</label>
-<select id="vstatus">
-<option>Production</option>
-<option>Prototype</option>
-<option>Retired</option>
-</select>
-
-<label>Notes / Version History</label>
-<textarea id="vnotes" placeholder="Blade, hook, skirt, trailer keeper, changes..."></textarea>
-
-<button onclick="saveLure()">Save Lure</button>
-
-<h3>Saved Lures</h3>
-<div id="lures"></div>
-</div>
-
-<div id="patterns" class="card hide">
-<h2>Pattern Map</h2>
-<p>Places each bait should excel on each body of water.</p>
-
-<label>Lake</label>
-<input id="plake" placeholder="Kunkel Lake">
-
-<label>Spot</label>
-<input id="pspot" placeholder="East riprap">
-
-<label>Best Lure</label>
-<input id="pbest" placeholder="Mini">
-
-<label>Why it excels here</label>
-<textarea id="pwhy" placeholder="Clear water, grass edge, pressured fish..."></textarea>
-
-<button onclick="savePattern()">Save Pattern Spot</button>
-
-<h3>Saved Spots</h3>
-<div id="spots"></div>
-</div><div id="settings" class="card hide">
-<h2>Backup</h2>
-
-<button onclick="exportData()">Export Backup</button>
-
-<label>Paste Backup JSON</label>
-<textarea id="importBox"></textarea>
-
-<button class="secondary" onclick="importData()">Import Backup</button>
-<button class="danger" onclick="clearAll()">Clear Everything</button>
-</div>
-
+  <section id="settings" class="screen">
+    <div class="card">
+      <h2>Backup</h2>
+      <button id="exportBtn">Export Backup</button>
+      <label>Paste Backup JSON</label><textarea id="importText"></textarea>
+      <button class="secondary" id="importBtn">Import Backup</button>
+      <button class="danger" id="clearBtn">Clear Everything</button>
+    </div>
+  </section>
 </main>
 
-<div class="nav">
-<button onclick="show('home')">Home</button>
-<button onclick="show('trip')">Trip</button>
-<button onclick="show('history')">History</button>
-<button onclick="show('performance')">Stats</button>
-<button onclick="show('settings')">Settings</button>
-</div>
+<nav>
+  <button class="on" data-go="home">Home</button>
+  <button data-go="trip">Trip</button>
+  <button data-go="history">History</button>
+  <button data-go="performance">Stats</button>
+  <button data-go="settings">Settings</button>
+</nav>
 
-<script>
-let db=JSON.parse(localStorage.logbook||'{"trips":[],"lures":[],"patterns":[]}');
-date.valueAsDate=new Date();
-
-function show(x){
-['home','trip','history','performance','trophy','vault','patterns','settings'].forEach(id=>document.getElementById(id).classList.add('hide'));
-document.getElementById(x).classList.remove('hide');
-render();
-}
-
-function val(x){return document.getElementById(x).value}
-function num(x){return Number(val(x)||0)}
-function save(){localStorage.logbook=JSON.stringify(db);render()}
-
-function saveTrip(){
-db.trips.unshift({
-date:val('date'),
-lake:val('lake'),
-spot:val('spot'),
-clarity:val('clarity'),
-cover:val('cover'),
-lure:val('lure'),
-weight:val('weight'),
-color:val('color'),
-trailer:val('trailer'),
-blade:val('blade'),
-bites:num('bites'),
-landed:num('landed'),
-lost:num('lost'),
-biggest:val('biggest'),
-lesson:val('lesson'),
-notes:val('notes')
-});
-save();
-alert('Trip saved');
-show('history');
-}
-
-function saveLure(){
-db.lures.unshift({
-name:val('vname'),
-status:val('vstatus'),
-notes:val('vnotes')
-});
-save();
-}
-
-function savePattern(){
-db.patterns.unshift({
-lake:val('plake'),
-spot:val('pspot'),
-best:val('pbest'),
-why:val('pwhy')
-});
-save();
-}function render(){
-let trips=db.trips;
-let bites=trips.reduce((a,t)=>a+t.bites,0);
-let landed=trips.reduce((a,t)=>a+t.landed,0);
-let lost=trips.reduce((a,t)=>a+t.lost,0);
-
-stats.innerHTML=
-`<div class="stat"><span>Trips</span><b>${trips.length}</b></div>
-<div class="stat"><span>Bites</span><b>${bites}</b></div>
-<div class="stat"><span>Landed</span><b>${landed}</b></div>
-<div class="stat"><span>Lost</span><b>${lost}</b></div>`;
-
-chief.innerHTML=trips.length
-? `Last trip: <b>${trips[0].lake}</b> · ${trips[0].lure} · ${trips[0].bites} bites.`
-: 'Save a trip and Chief will start finding patterns.';
-
-let q=(search?.value||'').toLowerCase();
-let filtered=trips.filter(t=>JSON.stringify(t).toLowerCase().includes(q));
-
-list.innerHTML=filtered.map(t=>
-`<div class="card">
-<b>${t.date} - ${t.lake}</b><br>
-<span class="pill">${t.lure}</span>
-<span class="pill">${t.bites} bites</span>
-<span class="pill">${t.landed} landed</span>
-<span class="pill">${t.lost} lost</span>
-<p>${t.lesson||t.notes||''}</p>
-</div>`).join('') || 'No trips yet.';
-
-let byLure={};
-trips.forEach(t=>{
-if(!byLure[t.lure]) byLure[t.lure]={trips:0,bites:0,landed:0,lost:0};
-byLure[t.lure].trips++;
-byLure[t.lure].bites+=t.bites;
-byLure[t.lure].landed+=t.landed;
-byLure[t.lure].lost+=t.lost;
-});
-
-perf.innerHTML=Object.keys(byLure).map(l=>{
-let x=byLure[l];
-return `<div class="card">
-<h3>${l}</h3>
-<div class="stat"><span>Trips</span><b>${x.trips}</b></div>
-<div class="stat"><span>Bites</span><b>${x.bites}</b></div>
-<div class="stat"><span>Landed</span><b>${x.landed}</b></div>
-<div class="stat"><span>Lost</span><b>${x.lost}</b></div>
-</div>`;
-}).join('') || 'No performance data yet.';
-
-trophyList.innerHTML=trips
-.filter(t=>t.biggest)
-.sort((a,b)=>Number(b.biggest)-Number(a.biggest))
-.map(t=>`<div class="card"><b>${t.biggest} lb</b><br>${t.lake} · ${t.lure}<p>${t.notes||''}</p></div>`)
-.join('') || 'No trophy fish yet.';
-
-lures.innerHTML=db.lures.map(l=>
-`<div class="card"><b>${l.name}</b> <span class="pill">${l.status}</span><p>${l.notes}</p></div>`
-).join('') || 'No lures saved yet.';
-
-spots.innerHTML=db.patterns.map(p=>
-`<div class="card"><b>${p.lake} - ${p.spot}</b><br><span class="pill">${p.best}</span><p>${p.why}</p></div>`
-).join('') || 'No pattern spots saved yet.';
-}
-
-function exportData(){
-let blob=new Blob([JSON.stringify(db,null,2)],{type:'application/json'});
-let a=document.createElement('a');
-a.href=URL.createObjectURL(blob);
-a.download='the-logbook-backup.json';
-a.click();
-}
-
-function importData(){
-try{
-db=JSON.parse(importBox.value);
-save();
-alert('Backup imported');
-}catch(e){
-alert('Backup failed');
-}
-}
-
-function clearAll(){
-if(confirm('Delete everything?')){
-db={trips:[],lures:[],patterns:[]};
-save();
-}
-}
-
-render();
-</script>
+<script src="app.js"></script>
 </body>
 </html>
