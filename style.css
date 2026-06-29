@@ -82,3 +82,11 @@ button:active{transform:scale(.98)}@media(max-width:520px){.app-header h1{font-s
 .back-hub{border:1px solid var(--border);background:var(--panel);color:var(--text);border-radius:999px;padding:10px 14px;font-weight:900;margin:-4px 0 14px}
 .nav-bar{justify-content:flex-start}
 @media(max-width:520px){.hub-grid{grid-template-columns:1fr}.hub-card{min-height:88px}}
+
+.engine-score{font-size:60px;font-weight:900;color:var(--gold);line-height:.95}
+.reason-list{display:flex;flex-direction:column;gap:10px;margin-top:12px}
+.reason-item{background:var(--bg-soft);border:1px solid var(--border);border-radius:14px;padding:12px}
+.reason-item strong{color:var(--gold)}
+.hot-card{border-color:var(--gold);background:linear-gradient(180deg,rgba(202,162,74,.16),rgba(20,32,20,.95))}
+.switch-alert{border-color:#caa24a;background:linear-gradient(180deg,rgba(202,162,74,.22),rgba(20,32,20,.95))}
+.pb-number{font-size:58px;font-weight:900;color:var(--gold);line-height:.9}
