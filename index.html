@@ -23,11 +23,12 @@
     <button data-nav="home">Home</button>
     <button data-nav="trip">Trip</button>
     <button data-nav="catch">Catch</button>
-    <button data-nav="history">History</button>
-    <button data-nav="stats">Stats</button>
     <button data-nav="recommend">Recommend</button>
+    <button data-nav="brain">Brain</button>
     <button data-nav="patterns">Patterns</button>
     <button data-nav="report">Report</button>
+    <button data-nav="history">History</button>
+    <button data-nav="stats">Stats</button>
     <button data-nav="baits">Baits</button>
     <button data-nav="photos">Photos</button>
   </nav>
@@ -47,12 +48,13 @@
       </div>
 
       <div id="homeRecommendationCard" class="card"></div>
+      <div id="homeBrainCard" class="card"></div>
       <div id="homePatternCard" class="card"></div>
 
       <button class="primary" data-nav="catch">Quick Catch</button>
-      <button class="secondary" data-nav="trip">Start / Manage Trip</button>
       <button class="secondary" data-nav="recommend">What Should I Throw?</button>
-      <button class="secondary" data-nav="patterns">Pattern Finder</button>
+      <button class="secondary" data-nav="brain">Fishing Brain</button>
+      <button class="secondary" data-nav="trip">Start / Manage Trip</button>
     </section>
 
     <section id="trip" data-page class="page">
@@ -69,6 +71,8 @@
             <option>Crystal Clear</option><option>Clear</option><option>Slight Stain</option><option>Stained</option><option>Muddy</option>
           </select>
         </label>
+        <label>Water Temp<input id="tripWaterTemp" type="number" step="0.1" placeholder="Optional" /></label>
+        <label>Wind<input id="tripWind" type="text" placeholder="SW 12 mph / calm / gusty" /></label>
         <label>Notes<textarea id="tripNotes" placeholder="What are you trying to learn?"></textarea></label>
         <button class="primary" type="submit">Start Trip</button>
       </form>
@@ -99,11 +103,12 @@
       </form>
     </section>
 
-    <section id="history" data-page class="page"><h2>Trip History</h2><div id="tripHistory"></div></section>
-    <section id="stats" data-page class="page"><h2>Bait Stats</h2><div id="baitStats"></div></section>
     <section id="recommend" data-page class="page"><h2>What Should I Throw?</h2><div id="recommendationReport"></div></section>
+    <section id="brain" data-page class="page"><h2>Fishing Brain</h2><div id="brainReport"></div></section>
     <section id="patterns" data-page class="page"><h2>Pattern Finder</h2><div id="patternReport"></div></section>
     <section id="report" data-page class="page"><h2>Trip Report</h2><div id="tripReport"></div></section>
+    <section id="history" data-page class="page"><h2>Trip History</h2><div id="tripHistory"></div></section>
+    <section id="stats" data-page class="page"><h2>Bait Stats</h2><div id="baitStats"></div></section>
 
     <section id="baits" data-page class="page">
       <h2>2° Baits Manager</h2>
@@ -129,6 +134,7 @@
   <script src="patterns.js"></script>
   <script src="reports.js"></script>
   <script src="recommendations.js"></script>
+  <script src="brain.js"></script>
   <script src="ui.js"></script>
   <script src="app.js"></script>
 </body>
