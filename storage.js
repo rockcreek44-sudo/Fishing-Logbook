@@ -1,10 +1,20 @@
 const Storage = (() => {
   const DB_KEY = "twoDegreeLogbookV3";
-  const DB_VERSION = 1;
+  const DB_VERSION = 2;
 
   const defaultData = () => ({
     version: DB_VERSION,
-    settings: { theme: "dark", units: "imperial" },
+    settings: {
+      theme: "dark",
+      units: "imperial",
+      lastSetup: {
+        bait: "Workhorse",
+        color: "Green Pumpkin",
+        trailer: "",
+        cover: "Grass",
+        depth: ""
+      }
+    },
     currentTrip: null,
     trips: [],
     catches: [],
@@ -16,11 +26,27 @@ const Storage = (() => {
 
   function load() {
     const raw = localStorage.getItem(DB_KEY);
-    if (!raw) { db = defaultData(); save(); return db; }
+
+    if (!raw) {
+      db = defaultData();
+      save();
+      return db;
+    }
+
     try {
       db = JSON.parse(raw);
-      db.version = db.version || DB_VERSION;
-      db.settings = db.settings || { theme: "dark", units: "imperial" };
+      db.version = DB_VERSION;
+      db.settings = db.settings || {};
+      db.settings.theme = db.settings.theme || "dark";
+      db.settings.units = db.settings.units || "imperial";
+      db.settings.lastSetup = db.settings.lastSetup || {
+        bait: "Workhorse",
+        color: "Green Pumpkin",
+        trailer: "",
+        cover: "Grass",
+        depth: ""
+      };
+      db.currentTrip = db.currentTrip || null;
       db.trips = db.trips || [];
       db.catches = db.catches || [];
       db.prototypes = db.prototypes || [];
@@ -29,25 +55,64 @@ const Storage = (() => {
       db = defaultData();
       save();
     }
+
     return db;
   }
 
-  function save() { localStorage.setItem(DB_KEY, JSON.stringify(db)); }
+  function save() {
+    localStorage.setItem(DB_KEY, JSON.stringify(db));
+  }
+
   function data() { return db; }
   function reset() { db = defaultData(); save(); }
+
   function currentTrip() { return db.currentTrip; }
   function setCurrentTrip(trip) { db.currentTrip = trip; save(); }
-  function endTrip() { if (!db.currentTrip) return; db.trips.push(db.currentTrip); db.currentTrip = null; save(); }
+
+  function endTrip() {
+    if (!db.currentTrip) return;
+    db.trips.push(db.currentTrip);
+    db.currentTrip = null;
+    save();
+  }
+
   function trips() { return db.trips; }
   function addTrip(trip) { db.trips.push(trip); save(); }
+
   function catches() { return db.catches; }
   function addCatch(catchData) { db.catches.push(catchData); save(); }
+
   function settings() { return db.settings; }
   function updateSettings(values) { db.settings = { ...db.settings, ...values }; save(); }
+
+  function lastSetup() { return db.settings.lastSetup; }
+  function updateLastSetup(values) {
+    db.settings.lastSetup = { ...db.settings.lastSetup, ...values };
+    save();
+  }
+
   function exportJSON() { return JSON.stringify(db, null, 2); }
-  function importJSON(text) { try { db = JSON.parse(text); save(); return true; } catch { return false; } }
+
+  function importJSON(text) {
+    try {
+      db = JSON.parse(text);
+      save();
+      load();
+      return true;
+    } catch {
+      return false;
+    }
+  }
 
   load();
 
-  return { load, save, data, reset, currentTrip, setCurrentTrip, endTrip, trips, addTrip, catches, addCatch, settings, updateSettings, exportJSON, importJSON };
+  return {
+    load, save, data, reset,
+    currentTrip, setCurrentTrip, endTrip,
+    trips, addTrip,
+    catches, addCatch,
+    settings, updateSettings,
+    lastSetup, updateLastSetup,
+    exportJSON, importJSON
+  };
 })();
