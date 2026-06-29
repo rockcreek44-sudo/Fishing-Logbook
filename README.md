@@ -1,11 +1,12 @@
-# 2° Logbook v3 Build 16 - Predictive Fishing Intelligence
+# 2° Logbook v3 Build 17 - Tournament AI
 
 Upload all files in this ZIP to the root of your GitHub repository.
 
 What changed:
-- Added Pattern Predictor tab.
-- Added Home Pattern Predictor card.
-- Predicts today's best bait/color/trailer/cover.
-- Scores patterns against current trip lake, weather, clarity, water temp, wind, month, time, and season.
-- Adds backup pattern recommendations.
-- Explains why it recommended the pattern.
+- Added Tournament AI tab.
+- Added Tournament AI card on Home.
+- Added target weight goal.
+- Added strategy mode: Fill Limit, Small Upgrade, Swing Smart, Swing For Giant, Protect & Upgrade.
+- Added cull read and target gap.
+- Added AI tournament notes.
+- Connects Tournament Mode with Pattern Predictor.
