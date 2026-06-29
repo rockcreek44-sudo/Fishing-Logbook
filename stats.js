@@ -1,0 +1,32 @@
+const Stats = (() => {
+  function initialize() { console.log("Stats module ready."); }
+  function catches() { return Storage.catches(); }
+  function totalFish() { return catches().length; }
+  function biggestFish() { const fish = catches(); if (!fish.length) return null; return fish.reduce((largest, current) => current.weight > largest.weight ? current : largest); }
+  function averageWeight() { const fish = catches(); if (!fish.length) return 0; return fish.reduce((sum, current) => sum + current.weight, 0) / fish.length; }
+  function averageLength() { const fish = catches(); if (!fish.length) return 0; return fish.reduce((sum, current) => sum + current.length, 0) / fish.length; }
+
+  function baitPerformance() {
+    const results = {};
+    catches().forEach(fish => {
+      if (!results[fish.bait]) results[fish.bait] = { fish: 0, weight: 0 };
+      results[fish.bait].fish++;
+      results[fish.bait].weight += fish.weight;
+    });
+    Object.keys(results).forEach(name => results[name].averageWeight = results[name].weight / results[name].fish);
+    return results;
+  }
+
+  function confidenceBait() {
+    const performance = baitPerformance();
+    let winner = null, high = -1;
+    Object.keys(performance).forEach(name => { if (performance[name].fish > high) { high = performance[name].fish; winner = name; } });
+    return winner;
+  }
+
+  function coverPerformance() { const results = {}; catches().forEach(fish => results[fish.cover] = (results[fish.cover] || 0) + 1); return results; }
+  function lakePerformance() { const results = {}; catches().forEach(fish => results[fish.lake] = (results[fish.lake] || 0) + 1); return results; }
+  function summary() { return { totalFish: totalFish(), biggestFish: biggestFish(), averageWeight: averageWeight(), averageLength: averageLength(), confidenceBait: confidenceBait(), baitPerformance: baitPerformance(), coverPerformance: coverPerformance(), lakePerformance: lakePerformance() }; }
+
+  return { initialize, totalFish, biggestFish, averageWeight, averageLength, baitPerformance, confidenceBait, coverPerformance, lakePerformance, summary };
+})();

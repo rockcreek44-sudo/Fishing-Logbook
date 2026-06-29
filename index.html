@@ -1,13 +1,111 @@
-<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#080a08"><title>The Logbook</title><link rel="manifest" href="manifest.json"><link rel="stylesheet" href="style.css"></head><body>
-<header><h1>🎣 THE LOGBOOK</h1><div class="sub">by 2° Baits · Every cast teaches something.</div></header>
-<main>
-<section id="home" class="screen active"><div class="card hero"><h2>Dashboard</h2><div id="dashboard"></div></div><div class="grid"><button data-go="trip">Start Trip</button><button class="secondary" data-go="catch">Quick Catch</button><button class="secondary" data-go="history">History</button><button class="secondary" data-go="performance">Performance</button><button class="secondary" data-go="trophy">Trophy Room</button><button class="secondary" data-go="vault">2° Baits Vault</button><button class="secondary" data-go="patterns">Pattern Map</button><button class="secondary" data-go="settings">Backup</button></div><div class="card"><h3>Chief's Report</h3><div id="chief" class="small"></div></div></section>
-<section id="trip" class="screen"><div class="card"><h2>New Trip</h2><label>Date</label><input id="date" type="date"><label>Lake</label><input id="lake" placeholder="Kunkel Lake"><label>Spot / Area</label><input id="spot" placeholder="North grass flat / east riprap"><div class="row"><div><label>Air Temp</label><input id="airTemp" placeholder="82"></div><div><label>Water Temp</label><input id="waterTemp" placeholder="72"></div></div><div class="row"><div><label>Wind</label><input id="wind" placeholder="SW 8 mph"></div><div><label>Sky</label><select id="sky"><option>Sunny</option><option>Partly Cloudy</option><option>Cloudy</option><option>Rain</option><option>Night</option></select></div></div><div class="row"><div><label>Water Clarity</label><select id="clarity"><option>Clear</option><option>Gin Clear</option><option>Stained</option><option>Muddy</option></select></div><div><label>Cover</label><select id="cover"><option>Grass</option><option>Riprap</option><option>Wood</option><option>Dock</option><option>Open Water</option><option>Mixed</option></select></div></div><div class="row"><div><label>Grass Type</label><select id="grass"><option>None</option><option>Hydrilla</option><option>Milfoil</option><option>Coontail</option><option>Mixed</option></select></div><div><label>Fishing From</label><select id="platform"><option>Bank</option><option>Boat</option><option>Kayak</option></select></div></div><h3>Lure Setup</h3><label>Lure</label><select id="lureSelect"></select><label>Other / Custom Lure</label><input id="lureCustom" placeholder="Only fill if not in list"><div class="row"><div><label>Weight</label><input id="weight" placeholder="1/2 oz"></div><div><label>Color</label><input id="color" placeholder="Green Pumpkin"></div></div><div class="row"><div><label>Trailer</label><input id="trailer" placeholder="Spunk Shad"></div><div><label>Blade</label><input id="blade" placeholder="Shakee / coffin / etc."></div></div><div class="row"><div><label>Rod</label><input id="rod" placeholder="Lew's TP3"></div><div><label>Line</label><input id="line" placeholder="15 lb fluoro"></div></div><h3>Trip Totals</h3><div class="row"><div><label>Bites</label><input id="bites" type="number" value="0"></div><div><label>Landed</label><input id="landed" type="number" value="0"></div></div><div class="row"><div><label>Lost</label><input id="lost" type="number" value="0"></div><div><label>Biggest</label><input id="biggest" placeholder="2.4 lb"></div></div><h3>Performance</h3><div class="row"><div><label>Confidence</label><input id="confidence" type="number" min="1" max="10" value="8"></div><div><label>Grass Clearance</label><input id="grassScore" type="number" min="1" max="10" value="8"></div></div><div class="row"><div><label>Hookups</label><input id="hookups" type="number" min="1" max="10" value="8"></div><div><label>Action / Hunt</label><input id="hunting" type="number" min="1" max="10" value="8"></div></div><label class="check"><input id="fishAgain" type="checkbox" checked>Would fish this setup again</label><label>Lesson Learned</label><input id="lesson" placeholder="What did this trip teach you?"><label>Notes</label><textarea id="notes"></textarea><button id="saveTrip">Save Trip</button></div></section>
-<section id="catch" class="screen"><div class="card"><h2>Quick Catch</h2><label>Date</label><input id="cDate" type="date"><label>Lake</label><input id="cLake" placeholder="Kunkel Lake"><label>Spot</label><input id="cSpot" placeholder="Bank grass / riprap"><label>Lure</label><select id="cLure"></select><label>Weight</label><input id="cWeight" placeholder="2.75"><label>Length</label><input id="cLength" placeholder="17 in"><label>Name / Notes</label><input id="cNote" placeholder="Larry, crushed it on the rip"><button id="saveCatch">Save Catch</button></div></section>
-<section id="history" class="screen"><div class="card"><h2>Trip History</h2><input id="search" placeholder="Search lake, lure, notes..."><div id="historyList"></div></div></section>
-<section id="performance" class="screen"><div class="card"><h2>Performance</h2><div id="performanceList"></div></div></section>
-<section id="trophy" class="screen"><div class="card"><h2>Trophy Room</h2><p class="small">All saved catches, biggest first.</p><div id="trophyList"></div></div></section>
-<section id="vault" class="screen"><div class="card"><h2>2° Baits Vault</h2><label>Lure Name</label><input id="vName" placeholder="Workhorse"><label>Category</label><select id="vCategory"><option>Bladed Jig</option><option>Swim Jig</option><option>Hard Bait</option><option>Soft Plastic</option><option>Prototype</option><option>Other</option></select><label>Status</label><select id="vStatus"><option>Production</option><option>Prototype</option><option>Retired</option></select><label>Notes / Version History</label><textarea id="vNotes" placeholder="Blade, hook, skirt, trailer keeper, changes..."></textarea><button id="saveLure">Save Lure</button></div><div class="card"><h3>Saved Lures</h3><div id="vaultList"></div></div></section>
-<section id="patterns" class="screen"><div class="card spot"><h2>Pattern Map</h2><p class="small">Places each bait should excel on each body of water.</p><label>Lake</label><input id="pLake" placeholder="Kunkel Lake"><label>Spot</label><input id="pSpot" placeholder="North weed flat"><div class="row"><div><label>Best Lure</label><input id="pBest" placeholder="Mini"></div><div><label>Backup Lure</label><input id="pBackup" placeholder="Workhorse"></div></div><label>Why it should excel there</label><textarea id="pWhy" placeholder="Clear water, grass edge, pressured fish..."></textarea><button id="savePattern">Save Pattern Spot</button></div><div class="card"><h3>Saved Spots</h3><div id="patternList"></div></div></section>
-<section id="settings" class="screen"><div class="card"><h2>Backup</h2><button id="exportBtn">Export Backup</button><label>Paste Backup JSON</label><textarea id="importText"></textarea><button class="secondary" id="importBtn">Import Backup</button><button class="danger" id="clearBtn">Clear Everything</button></div></section>
-</main><nav><button class="on" data-go="home">Home</button><button data-go="trip">Trip</button><button data-go="catch">Catch</button><button data-go="history">History</button><button data-go="settings">Settings</button></nav><script src="app.js"></script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>2° Logbook</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#caa24a" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="2° Logbook" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+</head>
+<body>
+  <header class="app-header">
+    <div>
+      <h1>2° Logbook</h1>
+      <p>Built on the water.</p>
+    </div>
+  </header>
+
+  <nav class="nav-bar">
+    <button data-nav="home">Home</button>
+    <button data-nav="trip">Trip</button>
+    <button data-nav="catch">Catch</button>
+    <button data-nav="history">History</button>
+    <button data-nav="stats">Stats</button>
+  </nav>
+
+  <main>
+    <section id="home" data-page class="page active">
+      <div class="card hero">
+        <h2>Current Trip</h2>
+        <p id="currentTripStatus">No active trip</p>
+      </div>
+
+      <div class="grid">
+        <div class="card"><span>Total Fish</span><strong id="totalFish">0</strong></div>
+        <div class="card"><span>Biggest</span><strong id="biggestFish">None</strong></div>
+        <div class="card"><span>Average</span><strong id="averageWeight">0.00</strong></div>
+        <div class="card"><span>Confidence</span><strong id="confidenceBait">No data</strong></div>
+      </div>
+
+      <button class="primary" data-nav="catch">Quick Catch</button>
+      <button class="secondary" data-nav="trip">Start / Manage Trip</button>
+    </section>
+
+    <section id="trip" data-page class="page">
+      <h2>Start Trip</h2>
+      <form id="startTripForm" class="card form">
+        <label>Lake / Spot<input id="tripLake" type="text" placeholder="Kunkel Lake" required /></label>
+        <label>Weather
+          <select id="tripWeather">
+            <option>Sunny</option><option>Cloudy</option><option>Rain</option><option>Windy</option><option>Night</option>
+          </select>
+        </label>
+        <label>Water Clarity
+          <select id="tripWaterClarity">
+            <option>Crystal Clear</option><option>Clear</option><option>Slight Stain</option><option>Stained</option><option>Muddy</option>
+          </select>
+        </label>
+        <label>Notes<textarea id="tripNotes" placeholder="What are you trying to learn?"></textarea></label>
+        <button class="primary" type="submit">Start Trip</button>
+      </form>
+      <button id="endTripButton" class="danger">End Current Trip</button>
+    </section>
+
+    <section id="catch" data-page class="page">
+      <h2>Quick Catch</h2>
+      <form id="catchForm" class="card form">
+        <label>Bait
+          <select id="catchBait">
+            <option>Workhorse</option><option>Mini</option><option>Swim Jig</option><option>Mr. Steal Your Girl</option><option>Other</option>
+          </select>
+        </label>
+        <label>Color<input id="catchColor" type="text" placeholder="Green Pumpkin" /></label>
+        <label>Trailer<input id="catchTrailer" type="text" placeholder="Dangler / Spunk Shad" /></label>
+        <div class="two-col">
+          <label>Weight<input id="catchWeight" type="number" step="0.01" placeholder="3.25" /></label>
+          <label>Length<input id="catchLength" type="number" step="0.25" placeholder="18" /></label>
+        </div>
+        <label>Cover
+          <select id="catchCover">
+            <option>Grass</option><option>Riprap</option><option>Wood</option><option>Dock</option><option>Open Water</option><option>Shade</option><option>Other</option>
+          </select>
+        </label>
+        <label>Depth<input id="catchDepth" type="number" step="0.5" placeholder="Optional" /></label>
+        <label>Notes<textarea id="catchNotes" placeholder="What did the fish teach you?"></textarea></label>
+        <button class="primary" type="submit">Save Catch</button>
+      </form>
+    </section>
+
+    <section id="history" data-page class="page">
+      <h2>Trip History</h2>
+      <div id="tripHistory"></div>
+    </section>
+
+    <section id="stats" data-page class="page">
+      <h2>Bait Stats</h2>
+      <div id="baitStats"></div>
+    </section>
+  </main>
+
+  <script src="storage.js"></script>
+  <script src="trips.js"></script>
+  <script src="catches.js"></script>
+  <script src="stats.js"></script>
+  <script src="ui.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
