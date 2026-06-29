@@ -26,6 +26,7 @@
     <button data-nav="history">History</button>
     <button data-nav="stats">Stats</button>
     <button data-nav="baits">Baits</button>
+    <button data-nav="photos">Photos</button>
   </nav>
 
   <main>
@@ -49,8 +50,16 @@
       <h2>Start Trip</h2>
       <form id="startTripForm" class="card form">
         <label>Lake / Spot<input id="tripLake" type="text" placeholder="Kunkel Lake" required /></label>
-        <label>Weather<select id="tripWeather"><option>Sunny</option><option>Cloudy</option><option>Rain</option><option>Windy</option><option>Night</option></select></label>
-        <label>Water Clarity<select id="tripWaterClarity"><option>Crystal Clear</option><option>Clear</option><option>Slight Stain</option><option>Stained</option><option>Muddy</option></select></label>
+        <label>Weather
+          <select id="tripWeather">
+            <option>Sunny</option><option>Cloudy</option><option>Rain</option><option>Windy</option><option>Night</option>
+          </select>
+        </label>
+        <label>Water Clarity
+          <select id="tripWaterClarity">
+            <option>Crystal Clear</option><option>Clear</option><option>Slight Stain</option><option>Stained</option><option>Muddy</option>
+          </select>
+        </label>
         <label>Notes<textarea id="tripNotes" placeholder="What are you trying to learn?"></textarea></label>
         <button class="primary" type="submit">Start Trip</button>
       </form>
@@ -63,19 +72,41 @@
         <label>Bait<select id="catchBait"></select></label>
         <label>Color<select id="catchColor"></select></label>
         <label>Trailer<select id="catchTrailer"></select></label>
+
         <div class="two-col">
           <label>Weight<input id="catchWeight" type="number" step="0.01" placeholder="3.25" /></label>
           <label>Length<input id="catchLength" type="number" step="0.25" placeholder="18" /></label>
         </div>
-        <label>Cover<select id="catchCover"><option>Grass</option><option>Riprap</option><option>Wood</option><option>Dock</option><option>Open Water</option><option>Shade</option><option>Other</option></select></label>
+
+        <label>Cover
+          <select id="catchCover">
+            <option>Grass</option><option>Riprap</option><option>Wood</option><option>Dock</option><option>Open Water</option><option>Shade</option><option>Other</option>
+          </select>
+        </label>
+
         <label>Depth<input id="catchDepth" type="number" step="0.5" placeholder="Optional" /></label>
         <label>Notes<textarea id="catchNotes" placeholder="What did the fish teach you?"></textarea></label>
+
+        <label>Fish Photo
+          <input id="catchPhoto" type="file" accept="image/*" capture="environment" />
+        </label>
+
+        <button id="useLocationButton" class="secondary" type="button">Use Current Location</button>
+        <p id="locationStatus" class="small-text">Location not saved.</p>
+
         <button class="primary" type="submit">Save Catch</button>
       </form>
     </section>
 
-    <section id="history" data-page class="page"><h2>Trip History</h2><div id="tripHistory"></div></section>
-    <section id="stats" data-page class="page"><h2>Bait Stats</h2><div id="baitStats"></div></section>
+    <section id="history" data-page class="page">
+      <h2>Trip History</h2>
+      <div id="tripHistory"></div>
+    </section>
+
+    <section id="stats" data-page class="page">
+      <h2>Bait Stats</h2>
+      <div id="baitStats"></div>
+    </section>
 
     <section id="baits" data-page class="page">
       <h2>2° Baits Manager</h2>
@@ -88,6 +119,11 @@
         <button class="primary" type="submit">Add Bait</button>
       </form>
       <div id="baitManagerList"></div>
+    </section>
+
+    <section id="photos" data-page class="page">
+      <h2>Catch Photos</h2>
+      <div id="photoGallery"></div>
     </section>
   </main>
 

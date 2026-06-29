@@ -1,10 +1,9 @@
-# 2° Logbook v3 Build 3 - Bait Manager
+# 2° Logbook v3 Build 4 - Catch Photos
 
 Upload all files in this ZIP to the root of your GitHub repository.
 
 What changed:
-- Added Baits page.
-- Added default bait lineup.
-- Added custom bait creation.
-- Quick Catch now uses bait manager choices.
-- Colors and trailers update based on selected bait.
+- Added fish photo upload to Quick Catch.
+- Added Photos tab/gallery.
+- Added current location button for catch location.
+- Saved photos and location data with each catch.
