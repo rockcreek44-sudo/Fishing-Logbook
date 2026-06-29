@@ -1,13 +1,12 @@
-# 2° Logbook v3 Build 33 - Premium Cleanup
+# 2° Logbook v3 Build 34 - No Giant Header Cleanup
 
 Upload all files in this ZIP to the root of your GitHub repository.
 
 What changed:
-- Removed the giant 2° banner completely.
-- Removed the oversized/cropped image-based header.
-- Added one centered 2° logo.
-- Added centered LOGBOOK text with metallic silver/red styling.
-- Added centered Built on the water subtitle.
-- Added a very faint background watermark only.
-- Cleaned up spacing and card styling.
-- Keeps all features from Build 31.
+- Completely removed the giant 2° banner/hero image.
+- Removed brand-header.png from the project.
+- Added a compact centered header.
+- Small 2° logo, LOGBOOK, and Built on the water only.
+- Locked the header height so it cannot become billboard-sized.
+- Removed horizontal overflow.
+- Dashboard now starts right below navigation.
