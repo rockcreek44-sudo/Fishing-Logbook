@@ -101,3 +101,88 @@ button:active{transform:scale(.98)}@media(max-width:520px){.app-header h1{font-s
 .switch-now{border-color:var(--gold);background:linear-gradient(180deg,rgba(202,162,74,.25),rgba(20,32,20,.95))}
 .stay-put{border-color:var(--border)}
 @media(max-width:520px){.rotation-controls{grid-template-columns:1fr}}
+
+/* Build 22 - Premium 2° Watermark Theme */
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  z-index:-1;
+  pointer-events:none;
+  background:
+    radial-gradient(circle at center, rgba(202,162,74,.08), transparent 42%),
+    url("logo-watermark.png") center 48% / min(78vw, 620px) auto no-repeat;
+  opacity:.055;
+  filter:grayscale(.08) saturate(.9);
+}
+
+body::after{
+  content:"";
+  position:fixed;
+  inset:0;
+  z-index:-2;
+  pointer-events:none;
+  background:
+    radial-gradient(circle at 50% 20%, rgba(202,162,74,.08), transparent 34%),
+    linear-gradient(180deg, rgba(0,0,0,.2), rgba(0,0,0,.6));
+}
+
+.card,
+.hub-card{
+  backdrop-filter: blur(2px);
+}
+
+.hero,
+.primary-hub,
+.card:has(.bar-fill){
+  box-shadow:
+    0 0 0 1px rgba(202,162,74,.08),
+    0 14px 30px rgba(0,0,0,.28),
+    0 0 26px rgba(202,162,74,.05);
+}
+
+button,
+.hub-card,
+.inline-button,
+.back-hub{
+  transition: transform .12s ease, box-shadow .12s ease, border-color .12s ease;
+}
+
+button:active,
+.hub-card:active,
+.inline-button:active,
+.back-hub:active{
+  transform: translateY(1px) scale(.99);
+}
+
+.page{
+  animation: pageFade .16s ease both;
+}
+
+@keyframes pageFade{
+  from{opacity:.82;transform:translateY(4px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+.app-header{
+  position:relative;
+}
+
+.app-header::after{
+  content:"";
+  position:absolute;
+  left:24px;
+  right:24px;
+  bottom:-1px;
+  height:1px;
+  background:linear-gradient(90deg, transparent, rgba(202,162,74,.35), transparent);
+}
+
+@media(max-width:520px){
+  body::before{
+    background:
+      radial-gradient(circle at center, rgba(202,162,74,.08), transparent 42%),
+      url("logo-watermark.png") center 46% / 92vw auto no-repeat;
+    opacity:.05;
+  }
+}
