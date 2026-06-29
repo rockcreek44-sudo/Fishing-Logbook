@@ -900,3 +900,53 @@ body::before{
     height:132px !important;
   }
 }
+
+/* Build 30 - Bright Hero Logo Match */
+.brand-hero{
+  height:158px !important;
+  background:
+    radial-gradient(circle at center, rgba(220,0,0,.24), transparent 42%),
+    radial-gradient(circle at center, rgba(202,162,74,.18), transparent 55%),
+    linear-gradient(180deg, rgba(4,11,6,.12), rgba(2,9,5,.88)) !important;
+}
+
+.brand-hero-logo{
+  opacity:.62 !important;
+  filter:
+    brightness(1.55)
+    contrast(1.42)
+    saturate(1.55)
+    drop-shadow(0 0 48px rgba(220,0,0,.72))
+    drop-shadow(0 0 20px rgba(255,255,255,.20))
+    drop-shadow(0 0 18px rgba(202,162,74,.15)) !important;
+}
+
+.top-brand-logo{
+  filter:
+    brightness(1.12)
+    contrast(1.18)
+    drop-shadow(0 0 20px rgba(220,0,0,.72))
+    drop-shadow(0 0 10px rgba(255,255,255,.16)) !important;
+}
+
+.brand-header{
+  background:
+    radial-gradient(circle at 50% 48%, rgba(220,0,0,.24), transparent 32%),
+    radial-gradient(circle at 50% 62%, rgba(202,162,74,.16), transparent 46%),
+    linear-gradient(180deg, rgba(2,8,5,.95), rgba(14,7,7,.76) 52%, rgba(2,8,5,.95)) !important;
+}
+
+@media(max-width:520px){
+  .brand-hero{
+    height:142px !important;
+  }
+  .brand-hero-logo{
+    opacity:.68 !important;
+    filter:
+      brightness(1.62)
+      contrast(1.48)
+      saturate(1.62)
+      drop-shadow(0 0 48px rgba(220,0,0,.78))
+      drop-shadow(0 0 22px rgba(255,255,255,.22)) !important;
+  }
+}

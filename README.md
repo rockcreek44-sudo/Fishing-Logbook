@@ -1,12 +1,11 @@
-# 2° Logbook v3 Build 29 - True Centered Brand Header
+# 2° Logbook v3 Build 30 - Bright Hero Logo Match
 
 Upload all files in this ZIP to the root of your GitHub repository.
 
 What changed:
-- Physically removed the plain "2° Logbook" header text from the HTML.
-- Added a true centered custom 2° logo.
-- Added centered metallic Logbook title.
-- Added centered premium "Built on the water." subtitle.
-- Added a taller brand-banner style header.
-- Kept the large logo hero below the header.
-- Keeps every feature from Build 28.
+- Brightened the large 2° hero logo.
+- Made the big hero logo closer to the smaller header logo.
+- Increased silver/white contrast.
+- Strengthened the red outline and red glow.
+- Added a subtle metallic highlight to logo-watermark.png.
+- Kept the centered premium header from Build 29.
