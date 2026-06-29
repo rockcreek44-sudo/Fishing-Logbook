@@ -25,6 +25,7 @@
     <button data-nav="catch">Catch</button>
     <button data-nav="history">History</button>
     <button data-nav="stats">Stats</button>
+    <button data-nav="recommend">Recommend</button>
     <button data-nav="patterns">Patterns</button>
     <button data-nav="report">Report</button>
     <button data-nav="baits">Baits</button>
@@ -45,10 +46,12 @@
         <div class="card"><span>Confidence</span><strong id="confidenceBait">No data</strong></div>
       </div>
 
+      <div id="homeRecommendationCard" class="card"></div>
       <div id="homePatternCard" class="card"></div>
 
       <button class="primary" data-nav="catch">Quick Catch</button>
       <button class="secondary" data-nav="trip">Start / Manage Trip</button>
+      <button class="secondary" data-nav="recommend">What Should I Throw?</button>
       <button class="secondary" data-nav="patterns">Pattern Finder</button>
     </section>
 
@@ -96,25 +99,11 @@
       </form>
     </section>
 
-    <section id="history" data-page class="page">
-      <h2>Trip History</h2>
-      <div id="tripHistory"></div>
-    </section>
-
-    <section id="stats" data-page class="page">
-      <h2>Bait Stats</h2>
-      <div id="baitStats"></div>
-    </section>
-
-    <section id="patterns" data-page class="page">
-      <h2>Pattern Finder</h2>
-      <div id="patternReport"></div>
-    </section>
-
-    <section id="report" data-page class="page">
-      <h2>Trip Report</h2>
-      <div id="tripReport"></div>
-    </section>
+    <section id="history" data-page class="page"><h2>Trip History</h2><div id="tripHistory"></div></section>
+    <section id="stats" data-page class="page"><h2>Bait Stats</h2><div id="baitStats"></div></section>
+    <section id="recommend" data-page class="page"><h2>What Should I Throw?</h2><div id="recommendationReport"></div></section>
+    <section id="patterns" data-page class="page"><h2>Pattern Finder</h2><div id="patternReport"></div></section>
+    <section id="report" data-page class="page"><h2>Trip Report</h2><div id="tripReport"></div></section>
 
     <section id="baits" data-page class="page">
       <h2>2° Baits Manager</h2>
@@ -129,10 +118,7 @@
       <div id="baitManagerList"></div>
     </section>
 
-    <section id="photos" data-page class="page">
-      <h2>Catch Photos</h2>
-      <div id="photoGallery"></div>
-    </section>
+    <section id="photos" data-page class="page"><h2>Catch Photos</h2><div id="photoGallery"></div></section>
   </main>
 
   <script src="storage.js"></script>
@@ -142,6 +128,7 @@
   <script src="stats.js"></script>
   <script src="patterns.js"></script>
   <script src="reports.js"></script>
+  <script src="recommendations.js"></script>
   <script src="ui.js"></script>
   <script src="app.js"></script>
 </body>
