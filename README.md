@@ -1,9 +1,9 @@
-# 2° Logbook v3 Build 4 - Catch Photos
+# 2° Logbook v3 Build 5 - Pattern Intelligence
 
 Upload all files in this ZIP to the root of your GitHub repository.
 
 What changed:
-- Added fish photo upload to Quick Catch.
-- Added Photos tab/gallery.
-- Added current location button for catch location.
-- Saved photos and location data with each catch.
+- Added Pattern Finder tab.
+- Added Chief's Report on Home.
+- Added bait, color, trailer, cover, and combo rankings.
+- Added confidence-style scores based on catch count, average weight, and biggest fish.

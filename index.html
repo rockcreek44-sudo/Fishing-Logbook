@@ -25,6 +25,7 @@
     <button data-nav="catch">Catch</button>
     <button data-nav="history">History</button>
     <button data-nav="stats">Stats</button>
+    <button data-nav="patterns">Patterns</button>
     <button data-nav="baits">Baits</button>
     <button data-nav="photos">Photos</button>
   </nav>
@@ -41,9 +42,10 @@
         <div class="card"><span>Average</span><strong id="averageWeight">0.00</strong></div>
         <div class="card"><span>Confidence</span><strong id="confidenceBait">No data</strong></div>
       </div>
+      <div id="homePatternCard" class="card"></div>
       <button class="primary" data-nav="catch">Quick Catch</button>
       <button class="secondary" data-nav="trip">Start / Manage Trip</button>
-      <button class="secondary" data-nav="baits">2° Baits Manager</button>
+      <button class="secondary" data-nav="patterns">Pattern Finder</button>
     </section>
 
     <section id="trip" data-page class="page">
@@ -108,6 +110,11 @@
       <div id="baitStats"></div>
     </section>
 
+    <section id="patterns" data-page class="page">
+      <h2>Pattern Finder</h2>
+      <div id="patternReport"></div>
+    </section>
+
     <section id="baits" data-page class="page">
       <h2>2° Baits Manager</h2>
       <form id="baitForm" class="card form">
@@ -132,6 +139,7 @@
   <script src="baits.js"></script>
   <script src="catches.js"></script>
   <script src="stats.js"></script>
+  <script src="patterns.js"></script>
   <script src="ui.js"></script>
   <script src="app.js"></script>
 </body>
