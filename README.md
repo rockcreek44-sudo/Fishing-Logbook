@@ -1,12 +1,11 @@
-# 2° Logbook v3 Build 22 - Premium Watermark Theme
+# 2° Logbook v3 Build 23 - Transparent Watermark Fix
 
 Upload all files in this ZIP to the root of your GitHub repository.
 
 What changed:
-- Added the 2° logo as a fixed background watermark across the whole app.
-- Added logo-watermark.png to the project.
-- Set the watermark to very low opacity so text remains readable.
-- Added subtle gold glow to premium cards.
-- Added smoother page transitions.
-- Added tap feedback on buttons and hub cards.
-- Keeps every feature from Build 21.
+- Fixed the background watermark by removing the black background from the logo.
+- Added a transparent logo-watermark.png.
+- Made the watermark larger and easier to see.
+- Kept opacity low enough that text and cards stay readable.
+- Added a subtle red metallic glow.
+- Keeps every feature from Build 22.

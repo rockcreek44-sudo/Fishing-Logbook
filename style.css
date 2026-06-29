@@ -186,3 +186,43 @@ button:active,
     opacity:.05;
   }
 }
+
+/* Build 23 - Transparent 2° watermark fix */
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  z-index:-1;
+  pointer-events:none;
+  background:
+    radial-gradient(circle at center, rgba(202,162,74,.10), transparent 42%),
+    url("logo-watermark.png") center 46% / min(92vw, 760px) auto no-repeat !important;
+  opacity:.105 !important;
+  filter: drop-shadow(0 0 26px rgba(202, 0, 0, .22)) grayscale(.02) saturate(1.25) !important;
+}
+
+.card,
+.hub-card,
+.nav-bar,
+.app-header{
+  position:relative;
+}
+
+.card::before,
+.hub-card::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:inherit;
+  pointer-events:none;
+  background:linear-gradient(180deg, rgba(255,255,255,.025), transparent 35%);
+}
+
+@media(max-width:520px){
+  body::before{
+    background:
+      radial-gradient(circle at center, rgba(202,162,74,.10), transparent 42%),
+      url("logo-watermark.png") center 45% / 118vw auto no-repeat !important;
+    opacity:.115 !important;
+  }
+}
