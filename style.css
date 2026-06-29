@@ -1437,76 +1437,113 @@ main {
   }
 }
 
-/* Build 35 - Official 2° Brand Pack + App Header */
-.official-brand-header{
-  height:168px !important;
-  min-height:168px !important;
-  max-height:168px !important;
-  padding:12px 10px !important;
-  margin:0 !important;
+/* Build 36 - Fixed Official Logo Header */
+html,
+body{
+  width:100% !important;
+  max-width:100% !important;
+  overflow-x:hidden !important;
+}
+
+*{
+  box-sizing:border-box !important;
+}
+
+.brand-hero,
+.brand-hero-logo,
+.brand-lockup,
+.clean-brand-logo,
+.clean-brand-title,
+.clean-brand-subtitle,
+.top-brand-logo,
+.brand-title,
+.brand-subtitle,
+.app-header h1,
+.app-header p{
+  display:none !important;
+  visibility:hidden !important;
+  width:0 !important;
+  height:0 !important;
+  max-width:0 !important;
+  max-height:0 !important;
+  overflow:hidden !important;
+}
+
+.official-logo-header{
   display:flex !important;
   align-items:center !important;
   justify-content:center !important;
-  text-align:center !important;
+  width:100% !important;
+  max-width:100vw !important;
+  height:142px !important;
+  min-height:142px !important;
+  max-height:142px !important;
+  padding:10px 12px !important;
+  margin:0 !important;
   overflow:hidden !important;
   background:
-    radial-gradient(circle at 50% 48%, rgba(220,0,0,.17), transparent 38%),
-    radial-gradient(circle at 50% 64%, rgba(202,162,74,.10), transparent 52%),
+    radial-gradient(circle at 50% 50%, rgba(220,0,0,.14), transparent 35%),
     linear-gradient(180deg, #020805 0%, #071409 100%) !important;
   border-bottom:1px solid rgba(202,162,74,.24) !important;
 }
 
-.official-brand-header::before,
-.official-brand-header::after{
+.official-logo-header::before,
+.official-logo-header::after{
   display:none !important;
   content:none !important;
 }
 
-.official-brand-lockup{
+.official-logo-img{
   display:block !important;
-  width:min(94vw, 500px) !important;
-  max-width:94vw !important;
+  width:auto !important;
   height:auto !important;
-  max-height:142px !important;
+  max-width:94vw !important;
+  max-height:118px !important;
   object-fit:contain !important;
+  object-position:center !important;
+  margin:0 auto !important;
+  padding:0 !important;
   filter:
-    drop-shadow(0 0 15px rgba(220,0,0,.34))
-    drop-shadow(0 8px 14px rgba(0,0,0,.65)) !important;
-}
-
-.clean-brand-logo,
-.clean-brand-title,
-.clean-brand-subtitle,
-.app-header h1,
-.app-header p,
-.brand-hero,
-.brand-lockup,
-.brand-hero-logo{
-  display:none !important;
+    drop-shadow(0 0 12px rgba(220,0,0,.28))
+    drop-shadow(0 7px 12px rgba(0,0,0,.55)) !important;
 }
 
 .nav-bar{
   margin-top:0 !important;
+  position:sticky !important;
+  top:0 !important;
+  z-index:30 !important;
+  overflow-x:auto !important;
+  overflow-y:hidden !important;
+  -webkit-overflow-scrolling:touch !important;
+  background:rgba(2,9,5,.90) !important;
+  backdrop-filter:blur(14px) !important;
+  border-top:1px solid rgba(202,162,74,.14) !important;
+  border-bottom:1px solid rgba(202,162,74,.22) !important;
 }
 
 main{
   padding-top:14px !important;
 }
 
+.page{
+  padding-top:0 !important;
+}
+
 body::before{
-  opacity:.035 !important;
+  opacity:.03 !important;
 }
 
 @media(max-width:520px){
-  .official-brand-header{
-    height:154px !important;
-    min-height:154px !important;
-    max-height:154px !important;
-    padding:10px 8px !important;
-  }
-  .official-brand-lockup{
-    width:96vw !important;
-    max-width:96vw !important;
+  .official-logo-header{
+    height:132px !important;
+    min-height:132px !important;
     max-height:132px !important;
+    padding:8px 8px !important;
+  }
+
+  .official-logo-img{
+    max-width:96vw !important;
+    max-height:108px !important;
   }
 }

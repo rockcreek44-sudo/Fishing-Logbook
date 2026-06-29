@@ -10,7 +10,7 @@
   "icons": [
     {
       "src": "brand-icon-2degree.png",
-      "sizes": "900x900",
+      "sizes": "768x768",
       "type": "image/png",
       "purpose": "any maskable"
     }
