@@ -22,6 +22,8 @@
   <nav class="nav-bar">
     <button data-nav="home">Home</button>
     <button data-nav="coach">Coach</button>
+    <button data-nav="mywater">My Water</button>
+    <button data-nav="intelligence">Intelligence</button>
     <button data-nav="trip">Trip</button>
     <button data-nav="catch">Catch</button>
     <button data-nav="recommend">Recommend</button>
@@ -50,12 +52,15 @@
       </div>
 
       <div id="homeCoachCard" class="card hero"></div>
+      <div id="homeIntelligenceCard" class="card"></div>
+      <div id="homeWaterCard" class="card"></div>
       <div id="homeRecommendationCard" class="card"></div>
       <div id="homeBrainCard" class="card"></div>
       <div id="homePatternCard" class="card"></div>
 
       <button class="primary" data-nav="catch">Quick Catch</button>
       <button class="secondary" data-nav="coach">AI Coach</button>
+      <button class="secondary" data-nav="intelligence">Fishing Intelligence</button>
       <button class="secondary" data-nav="recommend">What Should I Throw?</button>
       <button class="secondary" data-nav="brain">Fishing Brain</button>
       <button class="secondary" data-nav="trip">Start / Manage Trip</button>
@@ -108,6 +113,8 @@
     </section>
 
     <section id="coach" data-page class="page"><h2>AI Fishing Coach</h2><div id="coachReport"></div></section>
+    <section id="mywater" data-page class="page"><h2>My Water</h2><div id="myWaterReport"></div></section>
+    <section id="intelligence" data-page class="page"><h2>Fishing Intelligence</h2><div id="intelligenceReport"></div></section>
     <section id="recommend" data-page class="page"><h2>What Should I Throw?</h2><div id="recommendationReport"></div></section>
     <section id="brain" data-page class="page"><h2>Fishing Brain</h2><div id="brainReport"></div></section>
     <section id="lakebrain" data-page class="page"><h2>Lake Brain</h2><div id="lakeBrainReport"></div></section>
@@ -132,17 +139,19 @@
     <section id="photos" data-page class="page"><h2>Catch Photos</h2><div id="photoGallery"></div></section>
   </main>
 
-  <script src="storage.js?v=10"></script>
-  <script src="trips.js?v=10"></script>
-  <script src="baits.js?v=10"></script>
-  <script src="catches.js?v=10"></script>
-  <script src="stats.js?v=10"></script>
-  <script src="patterns.js?v=10"></script>
-  <script src="reports.js?v=10"></script>
-  <script src="recommendations.js?v=10"></script>
-  <script src="brain.js?v=10"></script>
-  <script src="coach.js?v=10"></script>
-  <script src="ui.js?v=10"></script>
-  <script src="app.js?v=10"></script>
+  <script src="storage.js?v=12"></script>
+  <script src="trips.js?v=12"></script>
+  <script src="baits.js?v=12"></script>
+  <script src="catches.js?v=12"></script>
+  <script src="stats.js?v=12"></script>
+  <script src="patterns.js?v=12"></script>
+  <script src="reports.js?v=12"></script>
+  <script src="recommendations.js?v=12"></script>
+  <script src="brain.js?v=12"></script>
+  <script src="coach.js?v=12"></script>
+  <script src="intelligence.js?v=12"></script>
+  <script src="water.js?v=12"></script>
+  <script src="ui.js?v=12"></script>
+  <script src="app.js?v=12"></script>
 </body>
 </html>
