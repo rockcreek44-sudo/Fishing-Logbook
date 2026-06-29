@@ -1436,3 +1436,77 @@ main {
     font-size:10px !important;
   }
 }
+
+/* Build 35 - Official 2° Brand Pack + App Header */
+.official-brand-header{
+  height:168px !important;
+  min-height:168px !important;
+  max-height:168px !important;
+  padding:12px 10px !important;
+  margin:0 !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  text-align:center !important;
+  overflow:hidden !important;
+  background:
+    radial-gradient(circle at 50% 48%, rgba(220,0,0,.17), transparent 38%),
+    radial-gradient(circle at 50% 64%, rgba(202,162,74,.10), transparent 52%),
+    linear-gradient(180deg, #020805 0%, #071409 100%) !important;
+  border-bottom:1px solid rgba(202,162,74,.24) !important;
+}
+
+.official-brand-header::before,
+.official-brand-header::after{
+  display:none !important;
+  content:none !important;
+}
+
+.official-brand-lockup{
+  display:block !important;
+  width:min(94vw, 500px) !important;
+  max-width:94vw !important;
+  height:auto !important;
+  max-height:142px !important;
+  object-fit:contain !important;
+  filter:
+    drop-shadow(0 0 15px rgba(220,0,0,.34))
+    drop-shadow(0 8px 14px rgba(0,0,0,.65)) !important;
+}
+
+.clean-brand-logo,
+.clean-brand-title,
+.clean-brand-subtitle,
+.app-header h1,
+.app-header p,
+.brand-hero,
+.brand-lockup,
+.brand-hero-logo{
+  display:none !important;
+}
+
+.nav-bar{
+  margin-top:0 !important;
+}
+
+main{
+  padding-top:14px !important;
+}
+
+body::before{
+  opacity:.035 !important;
+}
+
+@media(max-width:520px){
+  .official-brand-header{
+    height:154px !important;
+    min-height:154px !important;
+    max-height:154px !important;
+    padding:10px 8px !important;
+  }
+  .official-brand-lockup{
+    width:96vw !important;
+    max-width:96vw !important;
+    max-height:132px !important;
+  }
+}

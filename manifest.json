@@ -1,11 +1,18 @@
 {
   "name": "2\u00b0 Logbook",
-  "short_name": "Logbook",
+  "short_name": "2\u00b0",
   "description": "A fishing logbook and bait development tracker built for 2\u00b0 Baits.",
   "start_url": "./index.html",
   "display": "standalone",
-  "background_color": "#081008",
-  "theme_color": "#caa24a",
+  "background_color": "#020805",
+  "theme_color": "#020805",
   "orientation": "portrait",
-  "icons": []
+  "icons": [
+    {
+      "src": "brand-icon-2degree.png",
+      "sizes": "900x900",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
 }

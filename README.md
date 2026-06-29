@@ -1,12 +1,16 @@
-# 2° Logbook v3 Build 34 - No Giant Header Cleanup
+# 2° Logbook v3 Build 35 - Official Brand Pack
 
 Upload all files in this ZIP to the root of your GitHub repository.
 
 What changed:
-- Completely removed the giant 2° banner/hero image.
-- Removed brand-header.png from the project.
-- Added a compact centered header.
-- Small 2° logo, LOGBOOK, and Built on the water only.
-- Locked the header height so it cannot become billboard-sized.
-- Removed horizontal overflow.
-- Dashboard now starts right below navigation.
+- Added the official 2° Logbook logo selected by Tyler.
+- Created transparent app-ready brand assets:
+  - brand-official-full.png
+  - brand-header-official.png
+  - brand-horizontal.png
+  - brand-icon-2degree.png
+  - brand-preview-dark.png
+- Replaced the app header with the official logo lockup.
+- Removed the giant banner/hero logo approach.
+- Updated manifest icon reference.
+- Kept all app features from the previous build.
