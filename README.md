@@ -1,12 +1,12 @@
-# 2° Logbook v3 Build 17 - Tournament AI
+# 2° Logbook v3 Build 18 - Seasonal AI Engine
 
 Upload all files in this ZIP to the root of your GitHub repository.
 
 What changed:
-- Added Tournament AI tab.
-- Added Tournament AI card on Home.
-- Added target weight goal.
-- Added strategy mode: Fill Limit, Small Upgrade, Swing Smart, Swing For Giant, Protect & Upgrade.
-- Added cull read and target gap.
-- Added AI tournament notes.
-- Connects Tournament Mode with Pattern Predictor.
+- Added Seasonal AI tab.
+- Added Home Seasonal AI card.
+- Learns seasonal phases: Winter, Late Winter, Pre-Spawn, Spawn, Post-Spawn, Summer, Late Summer, Fall Transition, Fall Feed, Late Fall.
+- Adds seasonal recommendation for bait, color, trailer, and cover.
+- Adds seasonal confidence scores.
+- Tracks best depth and water temperature window by seasonal phase.
+- Builds a Seasonal Playbook from your logged catches.
