@@ -21,26 +21,11 @@
 
   <nav class="nav-bar">
     <button data-nav="home">Home</button>
-    <button data-nav="coach">Coach</button>
-    <button data-nav="tournament">Tournament</button>
-    <button data-nav="tourneyai">Tourney AI</button>
-    <button data-nav="timeline">Timeline</button>
-    <button data-nav="predictor">Predictor</button>
-    <button data-nav="seasonal">Seasonal AI</button>
-    <button data-nav="mywater">My Water</button>
-    <button data-nav="intelligence">Intelligence</button>
-    <button data-nav="trip">Trip</button>
-    <button data-nav="catch">Catch</button>
-    <button data-nav="logbook">Logbook</button>
-    <button data-nav="recommend">Recommend</button>
-    <button data-nav="brain">Brain</button>
-    <button data-nav="lakebrain">Lake Brain</button>
-    <button data-nav="patterns">Patterns</button>
-    <button data-nav="report">Report</button>
-    <button data-nav="history">History</button>
-    <button data-nav="stats">Stats</button>
-    <button data-nav="baits">Baits</button>
-    <button data-nav="photos">Photos</button>
+    <button data-nav="fishinghub">Fishing</button>
+    <button data-nav="aihub">AI</button>
+    <button data-nav="waterhub">Waters</button>
+    <button data-nav="analytics">Analytics</button>
+    <button data-nav="settings">Settings</button>
   </nav>
 
   <main>
@@ -80,6 +65,61 @@
       <button class="secondary" data-nav="recommend">What Should I Throw?</button>
       <button class="secondary" data-nav="brain">Fishing Brain</button>
       <button class="secondary" data-nav="trip">Start / Manage Trip</button>
+    </section>
+
+    
+    <section id="fishinghub" data-page class="page">
+      <h2>Fishing</h2>
+      <div class="hub-grid">
+        <button class="hub-card" data-nav="trip"><strong>Trip</strong><span>Start or manage a trip</span></button>
+        <button class="hub-card" data-nav="catch"><strong>Quick Catch</strong><span>Log fish fast</span></button>
+        <button class="hub-card" data-nav="logbook"><strong>Catch Logbook</strong><span>Edit and review catches</span></button>
+        <button class="hub-card" data-nav="timeline"><strong>Bite Timeline</strong><span>Best times and seasons</span></button>
+        <button class="hub-card" data-nav="tournament"><strong>Tournament Mode</strong><span>Live bag and culls</span></button>
+      </div>
+    </section>
+
+    <section id="aihub" data-page class="page">
+      <h2>AI Tools</h2>
+      <div class="hub-grid">
+        <button class="hub-card primary-hub" data-nav="coach"><strong>AI Coach</strong><span>Today's game plan</span></button>
+        <button class="hub-card" data-nav="predictor"><strong>Pattern Predictor</strong><span>Best pattern right now</span></button>
+        <button class="hub-card" data-nav="seasonal"><strong>Seasonal AI</strong><span>Seasonal playbook</span></button>
+        <button class="hub-card" data-nav="brain"><strong>Fishing Brain</strong><span>Long-term pattern learning</span></button>
+        <button class="hub-card" data-nav="tourneyai"><strong>Tournament AI</strong><span>Strategy and target weight</span></button>
+      </div>
+    </section>
+
+    <section id="waterhub" data-page class="page">
+      <h2>Waters</h2>
+      <div class="hub-grid">
+        <button class="hub-card primary-hub" data-nav="mywater"><strong>My Water</strong><span>Lake-by-lake profiles</span></button>
+        <button class="hub-card" data-nav="lakebrain"><strong>Lake Brain</strong><span>Lake-specific recommendations</span></button>
+        <button class="hub-card" data-nav="photos"><strong>Photos</strong><span>Catch gallery</span></button>
+      </div>
+    </section>
+
+    <section id="analytics" data-page class="page">
+      <h2>Analytics</h2>
+      <div class="hub-grid">
+        <button class="hub-card primary-hub" data-nav="intelligence"><strong>Fishing Intelligence</strong><span>Confidence and hot/cold trends</span></button>
+        <button class="hub-card" data-nav="patterns"><strong>Pattern Finder</strong><span>Best combos and signals</span></button>
+        <button class="hub-card" data-nav="report"><strong>Trip Reports</strong><span>Review trip results</span></button>
+        <button class="hub-card" data-nav="stats"><strong>Stats</strong><span>Bait performance</span></button>
+        <button class="hub-card" data-nav="baits"><strong>Baits</strong><span>Manage bait lineup</span></button>
+      </div>
+    </section>
+
+    <section id="settings" data-page class="page">
+      <h2>Settings</h2>
+      <div class="card hero">
+        <h3>2° Logbook</h3>
+        <p>Version 3.0 Build 19</p>
+      </div>
+      <div class="hub-grid">
+        <button class="hub-card" data-nav="baits"><strong>Bait Manager</strong><span>Edit your lure lineup</span></button>
+        <button class="hub-card" data-nav="logbook"><strong>Catch Data</strong><span>Review, edit, or delete catches</span></button>
+      </div>
     </section>
 
     <section id="trip" data-page class="page">
@@ -133,17 +173,17 @@
       </form>
     </section>
 
-    <section id="coach" data-page class="page"><h2>AI Fishing Coach</h2><div id="coachReport"></div></section>
+    <section id="coach" data-page class="page"><h2>AI Fishing Coach</h2><button class="back-hub" data-nav="aihub">Back to AI Hub</button><div id="coachReport"></div></section>
     <section id="tournament" data-page class="page"><h2>Tournament Mode</h2><div id="tournamentReport"></div></section>
-    <section id="tourneyai" data-page class="page"><h2>Tournament AI</h2><div id="tourneyAIReport"></div></section>
+    <section id="tourneyai" data-page class="page"><h2>Tournament AI</h2><button class="back-hub" data-nav="aihub">Back to AI Hub</button><div id="tourneyAIReport"></div></section>
     <section id="timeline" data-page class="page"><h2>Bite Timeline</h2><div id="timelineReport"></div></section>
-    <section id="predictor" data-page class="page"><h2>Pattern Predictor</h2><div id="predictorReport"></div></section>
-    <section id="seasonal" data-page class="page"><h2>Seasonal AI</h2><div id="seasonalReport"></div></section>
+    <section id="predictor" data-page class="page"><h2>Pattern Predictor</h2><button class="back-hub" data-nav="aihub">Back to AI Hub</button><div id="predictorReport"></div></section>
+    <section id="seasonal" data-page class="page"><h2>Seasonal AI</h2><button class="back-hub" data-nav="aihub">Back to AI Hub</button><div id="seasonalReport"></div></section>
     <section id="mywater" data-page class="page"><h2>My Water</h2><div id="myWaterReport"></div></section>
     <section id="intelligence" data-page class="page"><h2>Fishing Intelligence</h2><div id="intelligenceReport"></div></section>
     <section id="logbook" data-page class="page"><h2>Catch Logbook</h2><div id="catchLogbook"></div></section>
     <section id="recommend" data-page class="page"><h2>What Should I Throw?</h2><div id="recommendationReport"></div></section>
-    <section id="brain" data-page class="page"><h2>Fishing Brain</h2><div id="brainReport"></div></section>
+    <section id="brain" data-page class="page"><h2>Fishing Brain</h2><button class="back-hub" data-nav="aihub">Back to AI Hub</button><div id="brainReport"></div></section>
     <section id="lakebrain" data-page class="page"><h2>Lake Brain</h2><div id="lakeBrainReport"></div></section>
     <section id="patterns" data-page class="page"><h2>Pattern Finder</h2><div id="patternReport"></div></section>
     <section id="report" data-page class="page"><h2>Trip Report</h2><div id="tripReport"></div></section>
@@ -166,24 +206,24 @@
     <section id="photos" data-page class="page"><h2>Catch Photos</h2><div id="photoGallery"></div></section>
   </main>
 
-  <script src="storage.js?v=18"></script>
-  <script src="trips.js?v=18"></script>
-  <script src="baits.js?v=18"></script>
-  <script src="catches.js?v=18"></script>
-  <script src="stats.js?v=18"></script>
-  <script src="patterns.js?v=18"></script>
-  <script src="reports.js?v=18"></script>
-  <script src="recommendations.js?v=18"></script>
-  <script src="brain.js?v=18"></script>
-  <script src="coach.js?v=18"></script>
-  <script src="intelligence.js?v=18"></script>
-  <script src="water.js?v=18"></script>
-  <script src="tournament.js?v=18"></script>
-  <script src="tourneyai.js?v=18"></script>
-  <script src="timeline.js?v=18"></script>
-  <script src="predictor.js?v=18"></script>
-  <script src="seasonal.js?v=18"></script>
-  <script src="ui.js?v=18"></script>
-  <script src="app.js?v=18"></script>
+  <script src="storage.js?v=19"></script>
+  <script src="trips.js?v=19"></script>
+  <script src="baits.js?v=19"></script>
+  <script src="catches.js?v=19"></script>
+  <script src="stats.js?v=19"></script>
+  <script src="patterns.js?v=19"></script>
+  <script src="reports.js?v=19"></script>
+  <script src="recommendations.js?v=19"></script>
+  <script src="brain.js?v=19"></script>
+  <script src="coach.js?v=19"></script>
+  <script src="intelligence.js?v=19"></script>
+  <script src="water.js?v=19"></script>
+  <script src="tournament.js?v=19"></script>
+  <script src="tourneyai.js?v=19"></script>
+  <script src="timeline.js?v=19"></script>
+  <script src="predictor.js?v=19"></script>
+  <script src="seasonal.js?v=19"></script>
+  <script src="ui.js?v=19"></script>
+  <script src="app.js?v=19"></script>
 </body>
 </html>

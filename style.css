@@ -73,3 +73,12 @@ button:active{transform:scale(.98)}@media(max-width:520px){.app-header h1{font-s
 .phase-card strong{display:block;color:var(--gold);font-size:20px;margin-top:5px}
 .season-read{font-size:18px;line-height:1.45;color:var(--text)}
 @media(max-width:520px){.phase-grid{grid-template-columns:1fr}}
+
+.hub-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.hub-card{width:100%;text-align:left;border:1px solid var(--border);background:linear-gradient(180deg,var(--panel-light),var(--panel));color:var(--text);border-radius:18px;padding:16px;box-shadow:var(--shadow);min-height:104px}
+.hub-card strong{display:block;color:var(--gold);font-size:22px;margin-bottom:8px}
+.hub-card span{display:block;color:var(--muted);font-size:14px;line-height:1.35}
+.primary-hub{border-color:var(--gold);background:linear-gradient(180deg,rgba(202,162,74,.18),rgba(20,32,20,.95))}
+.back-hub{border:1px solid var(--border);background:var(--panel);color:var(--text);border-radius:999px;padding:10px 14px;font-weight:900;margin:-4px 0 14px}
+.nav-bar{justify-content:flex-start}
+@media(max-width:520px){.hub-grid{grid-template-columns:1fr}.hub-card{min-height:88px}}
