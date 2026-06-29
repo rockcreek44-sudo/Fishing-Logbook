@@ -1,12 +1,11 @@
-# 2° Logbook v3 Build 25 - Strong Visible Logo Background
+# 2° Logbook v3 Build 27 - Reliable Logo Hero Section
 
 Upload all files in this ZIP to the root of your GitHub repository.
 
 What changed:
-- Made the 2° logo much more visible behind the interface.
-- Moved the logo into the open space below the header so it is not hidden by cards.
-- Added stronger silver/red glow and contrast.
-- Added a subtle premium brushed-metal background texture.
-- Made the navigation bar sticky with a glass effect.
-- Added a stronger 2° brand mark beside the app title.
-- Keeps every feature from Build 24.
+- Replaced the hidden CSS watermark with a real visible logo hero section.
+- The large 2° logo now sits directly under the app header.
+- Cards begin below the hero so the logo cannot be covered.
+- Added red glow and premium brushed-metal background texture.
+- Kept the small 2° logo beside the app title.
+- Keeps every feature from Build 26.
