@@ -779,3 +779,124 @@ body::before{
     height:158px !important;
   }
 }
+
+/* Build 29 - True Centered Brand Header */
+.brand-header{
+  min-height:244px !important;
+  padding:28px 16px 22px !important;
+  display:flex !important;
+  flex-direction:column !important;
+  align-items:center !important;
+  justify-content:center !important;
+  text-align:center !important;
+  gap:8px !important;
+  position:relative !important;
+  overflow:hidden !important;
+  background:
+    radial-gradient(circle at 50% 48%, rgba(220,0,0,.20), transparent 30%),
+    radial-gradient(circle at 50% 62%, rgba(202,162,74,.14), transparent 44%),
+    linear-gradient(180deg, rgba(2,8,5,.95), rgba(14,7,7,.72) 52%, rgba(2,8,5,.95)) !important;
+  border-bottom:1px solid rgba(202,162,74,.28) !important;
+}
+
+.brand-header::before{
+  content:"" !important;
+  position:absolute !important;
+  inset:0 !important;
+  background:
+    repeating-linear-gradient(115deg, rgba(255,255,255,.018) 0 1px, transparent 1px 8px),
+    linear-gradient(180deg, rgba(255,255,255,.025), transparent 45%) !important;
+  pointer-events:none !important;
+}
+
+.brand-header::after{
+  content:"" !important;
+  position:absolute !important;
+  left:0 !important;
+  right:0 !important;
+  bottom:0 !important;
+  height:54px !important;
+  background:linear-gradient(180deg, transparent, rgba(2,9,5,.92)) !important;
+  pointer-events:none !important;
+}
+
+.top-brand-logo{
+  width:min(30vw, 138px) !important;
+  max-height:74px !important;
+  object-fit:contain !important;
+  position:relative !important;
+  z-index:2 !important;
+  filter:
+    drop-shadow(0 0 18px rgba(220,0,0,.68))
+    drop-shadow(0 0 8px rgba(255,255,255,.12)) !important;
+}
+
+.brand-title{
+  position:relative !important;
+  z-index:2 !important;
+  font-size:clamp(48px, 12vw, 82px) !important;
+  font-weight:1000 !important;
+  line-height:.95 !important;
+  letter-spacing:.02em !important;
+  color:#f5f1df !important;
+  -webkit-text-stroke:1.2px rgba(220,0,0,.35);
+  text-shadow:
+    0 3px 0 rgba(0,0,0,.95),
+    0 0 18px rgba(220,0,0,.26),
+    0 0 28px rgba(202,162,74,.16) !important;
+  background:linear-gradient(180deg, #ffffff 0%, #d4d7d3 40%, #f2ead0 60%, #9da19b 100%) !important;
+  -webkit-background-clip:text !important;
+  background-clip:text !important;
+  -webkit-text-fill-color:transparent !important;
+}
+
+.brand-subtitle{
+  position:relative !important;
+  z-index:2 !important;
+  font-size:clamp(16px, 4.8vw, 24px) !important;
+  font-weight:900 !important;
+  letter-spacing:.08em !important;
+  text-transform:uppercase !important;
+  color:#ddd8c4 !important;
+  text-align:center !important;
+  text-shadow:
+    0 0 10px rgba(220,0,0,.20),
+    0 2px 0 rgba(0,0,0,.85) !important;
+}
+
+.app-header h1,
+.app-header p{
+  display:none !important;
+}
+
+.brand-hero{
+  height:150px !important;
+}
+
+.brand-hero-logo{
+  opacity:.28 !important;
+}
+
+.nav-bar{
+  margin-top:0 !important;
+}
+
+@media(max-width:520px){
+  .brand-header{
+    min-height:218px !important;
+    padding:24px 14px 20px !important;
+  }
+  .top-brand-logo{
+    width:120px !important;
+    max-height:62px !important;
+  }
+  .brand-title{
+    font-size:58px !important;
+  }
+  .brand-subtitle{
+    font-size:15px !important;
+  }
+  .brand-hero{
+    height:132px !important;
+  }
+}
