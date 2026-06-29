@@ -1685,3 +1685,35 @@ body::before{
     max-height:106px !important;
   }
 }
+
+/* Build 38 - Larger Official Logo Header */
+/* Same stable header as Build 37, just bigger. */
+#brandHeader37.brand-header-37{
+  height:176px !important;
+  min-height:176px !important;
+  max-height:176px !important;
+  padding:10px 10px !important;
+}
+
+#brandLogo37.brand-logo-37{
+  max-width:98vw !important;
+  max-height:154px !important;
+  width:auto !important;
+  height:auto !important;
+  object-fit:contain !important;
+  object-position:center !important;
+}
+
+@media(max-width:520px){
+  #brandHeader37.brand-header-37{
+    height:168px !important;
+    min-height:168px !important;
+    max-height:168px !important;
+    padding:9px 8px !important;
+  }
+
+  #brandLogo37.brand-logo-37{
+    max-width:98vw !important;
+    max-height:146px !important;
+  }
+}
