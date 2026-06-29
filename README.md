@@ -1,11 +1,12 @@
-# 2° Logbook v3 Build 23 - Transparent Watermark Fix
+# 2° Logbook v3 Build 24 - Cache-Proof Watermark
 
 Upload all files in this ZIP to the root of your GitHub repository.
 
 What changed:
-- Fixed the background watermark by removing the black background from the logo.
-- Added a transparent logo-watermark.png.
-- Made the watermark larger and easier to see.
-- Kept opacity low enough that text and cards stay readable.
-- Added a subtle red metallic glow.
-- Keeps every feature from Build 22.
+- Made the 2° watermark cache-proof by embedding the transparent logo directly into CSS.
+- Increased watermark visibility while keeping the cards readable.
+- Added subtle red metallic glow.
+- Added small 2° brand mark beside the app title.
+- Added stronger premium card border styling.
+- Added Build 24 version marker to index.html.
+- Keeps every feature from Build 23.
