@@ -1,12 +1,12 @@
-# 2° Logbook v3 Build 24 - Cache-Proof Watermark
+# 2° Logbook v3 Build 25 - Strong Visible Logo Background
 
 Upload all files in this ZIP to the root of your GitHub repository.
 
 What changed:
-- Made the 2° watermark cache-proof by embedding the transparent logo directly into CSS.
-- Increased watermark visibility while keeping the cards readable.
-- Added subtle red metallic glow.
-- Added small 2° brand mark beside the app title.
-- Added stronger premium card border styling.
-- Added Build 24 version marker to index.html.
-- Keeps every feature from Build 23.
+- Made the 2° logo much more visible behind the interface.
+- Moved the logo into the open space below the header so it is not hidden by cards.
+- Added stronger silver/red glow and contrast.
+- Added a subtle premium brushed-metal background texture.
+- Made the navigation bar sticky with a glass effect.
+- Added a stronger 2° brand mark beside the app title.
+- Keeps every feature from Build 24.
