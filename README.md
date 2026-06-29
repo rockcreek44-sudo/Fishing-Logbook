@@ -1,9 +1,9 @@
-# 2° Logbook v3 Build 5 - Pattern Intelligence
+# 2° Logbook v3 Build 6 - Trip Report
 
 Upload all files in this ZIP to the root of your GitHub repository.
 
 What changed:
-- Added Pattern Finder tab.
-- Added Chief's Report on Home.
-- Added bait, color, trailer, cover, and combo rankings.
-- Added confidence-style scores based on catch count, average weight, and biggest fish.
+- Added Trip Report tab.
+- Ending a trip now opens a summary report.
+- Report includes fish count, duration, biggest, average, best bait, best color, best cover.
+- Added copyable trip report text.

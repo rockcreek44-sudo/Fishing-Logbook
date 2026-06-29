@@ -26,6 +26,7 @@
     <button data-nav="history">History</button>
     <button data-nav="stats">Stats</button>
     <button data-nav="patterns">Patterns</button>
+    <button data-nav="report">Report</button>
     <button data-nav="baits">Baits</button>
     <button data-nav="photos">Photos</button>
   </nav>
@@ -36,13 +37,16 @@
         <h2>Current Trip</h2>
         <p id="currentTripStatus">No active trip</p>
       </div>
+
       <div class="grid">
         <div class="card"><span>Total Fish</span><strong id="totalFish">0</strong></div>
         <div class="card"><span>Biggest</span><strong id="biggestFish">None</strong></div>
         <div class="card"><span>Average</span><strong id="averageWeight">0.00</strong></div>
         <div class="card"><span>Confidence</span><strong id="confidenceBait">No data</strong></div>
       </div>
+
       <div id="homePatternCard" class="card"></div>
+
       <button class="primary" data-nav="catch">Quick Catch</button>
       <button class="secondary" data-nav="trip">Start / Manage Trip</button>
       <button class="secondary" data-nav="patterns">Pattern Finder</button>
@@ -74,28 +78,20 @@
         <label>Bait<select id="catchBait"></select></label>
         <label>Color<select id="catchColor"></select></label>
         <label>Trailer<select id="catchTrailer"></select></label>
-
         <div class="two-col">
           <label>Weight<input id="catchWeight" type="number" step="0.01" placeholder="3.25" /></label>
           <label>Length<input id="catchLength" type="number" step="0.25" placeholder="18" /></label>
         </div>
-
         <label>Cover
           <select id="catchCover">
             <option>Grass</option><option>Riprap</option><option>Wood</option><option>Dock</option><option>Open Water</option><option>Shade</option><option>Other</option>
           </select>
         </label>
-
         <label>Depth<input id="catchDepth" type="number" step="0.5" placeholder="Optional" /></label>
         <label>Notes<textarea id="catchNotes" placeholder="What did the fish teach you?"></textarea></label>
-
-        <label>Fish Photo
-          <input id="catchPhoto" type="file" accept="image/*" capture="environment" />
-        </label>
-
+        <label>Fish Photo<input id="catchPhoto" type="file" accept="image/*" capture="environment" /></label>
         <button id="useLocationButton" class="secondary" type="button">Use Current Location</button>
         <p id="locationStatus" class="small-text">Location not saved.</p>
-
         <button class="primary" type="submit">Save Catch</button>
       </form>
     </section>
@@ -113,6 +109,11 @@
     <section id="patterns" data-page class="page">
       <h2>Pattern Finder</h2>
       <div id="patternReport"></div>
+    </section>
+
+    <section id="report" data-page class="page">
+      <h2>Trip Report</h2>
+      <div id="tripReport"></div>
     </section>
 
     <section id="baits" data-page class="page">
@@ -140,6 +141,7 @@
   <script src="catches.js"></script>
   <script src="stats.js"></script>
   <script src="patterns.js"></script>
+  <script src="reports.js"></script>
   <script src="ui.js"></script>
   <script src="app.js"></script>
 </body>
