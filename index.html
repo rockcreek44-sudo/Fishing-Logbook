@@ -25,6 +25,7 @@
     <button data-nav="catch">Catch</button>
     <button data-nav="history">History</button>
     <button data-nav="stats">Stats</button>
+    <button data-nav="baits">Baits</button>
   </nav>
 
   <main>
@@ -33,32 +34,23 @@
         <h2>Current Trip</h2>
         <p id="currentTripStatus">No active trip</p>
       </div>
-
       <div class="grid">
         <div class="card"><span>Total Fish</span><strong id="totalFish">0</strong></div>
         <div class="card"><span>Biggest</span><strong id="biggestFish">None</strong></div>
         <div class="card"><span>Average</span><strong id="averageWeight">0.00</strong></div>
         <div class="card"><span>Confidence</span><strong id="confidenceBait">No data</strong></div>
       </div>
-
       <button class="primary" data-nav="catch">Quick Catch</button>
       <button class="secondary" data-nav="trip">Start / Manage Trip</button>
+      <button class="secondary" data-nav="baits">2° Baits Manager</button>
     </section>
 
     <section id="trip" data-page class="page">
       <h2>Start Trip</h2>
       <form id="startTripForm" class="card form">
         <label>Lake / Spot<input id="tripLake" type="text" placeholder="Kunkel Lake" required /></label>
-        <label>Weather
-          <select id="tripWeather">
-            <option>Sunny</option><option>Cloudy</option><option>Rain</option><option>Windy</option><option>Night</option>
-          </select>
-        </label>
-        <label>Water Clarity
-          <select id="tripWaterClarity">
-            <option>Crystal Clear</option><option>Clear</option><option>Slight Stain</option><option>Stained</option><option>Muddy</option>
-          </select>
-        </label>
+        <label>Weather<select id="tripWeather"><option>Sunny</option><option>Cloudy</option><option>Rain</option><option>Windy</option><option>Night</option></select></label>
+        <label>Water Clarity<select id="tripWaterClarity"><option>Crystal Clear</option><option>Clear</option><option>Slight Stain</option><option>Stained</option><option>Muddy</option></select></label>
         <label>Notes<textarea id="tripNotes" placeholder="What are you trying to learn?"></textarea></label>
         <button class="primary" type="submit">Start Trip</button>
       </form>
@@ -68,41 +60,40 @@
     <section id="catch" data-page class="page">
       <h2>Quick Catch</h2>
       <form id="catchForm" class="card form">
-        <label>Bait
-          <select id="catchBait">
-            <option>Workhorse</option><option>Mini</option><option>Swim Jig</option><option>Mr. Steal Your Girl</option><option>Other</option>
-          </select>
-        </label>
-        <label>Color<input id="catchColor" type="text" placeholder="Green Pumpkin" /></label>
-        <label>Trailer<input id="catchTrailer" type="text" placeholder="Dangler / Spunk Shad" /></label>
+        <label>Bait<select id="catchBait"></select></label>
+        <label>Color<select id="catchColor"></select></label>
+        <label>Trailer<select id="catchTrailer"></select></label>
         <div class="two-col">
           <label>Weight<input id="catchWeight" type="number" step="0.01" placeholder="3.25" /></label>
           <label>Length<input id="catchLength" type="number" step="0.25" placeholder="18" /></label>
         </div>
-        <label>Cover
-          <select id="catchCover">
-            <option>Grass</option><option>Riprap</option><option>Wood</option><option>Dock</option><option>Open Water</option><option>Shade</option><option>Other</option>
-          </select>
-        </label>
+        <label>Cover<select id="catchCover"><option>Grass</option><option>Riprap</option><option>Wood</option><option>Dock</option><option>Open Water</option><option>Shade</option><option>Other</option></select></label>
         <label>Depth<input id="catchDepth" type="number" step="0.5" placeholder="Optional" /></label>
         <label>Notes<textarea id="catchNotes" placeholder="What did the fish teach you?"></textarea></label>
         <button class="primary" type="submit">Save Catch</button>
       </form>
     </section>
 
-    <section id="history" data-page class="page">
-      <h2>Trip History</h2>
-      <div id="tripHistory"></div>
-    </section>
+    <section id="history" data-page class="page"><h2>Trip History</h2><div id="tripHistory"></div></section>
+    <section id="stats" data-page class="page"><h2>Bait Stats</h2><div id="baitStats"></div></section>
 
-    <section id="stats" data-page class="page">
-      <h2>Bait Stats</h2>
-      <div id="baitStats"></div>
+    <section id="baits" data-page class="page">
+      <h2>2° Baits Manager</h2>
+      <form id="baitForm" class="card form">
+        <label>Bait Name<input id="baitName" type="text" placeholder="Example: Workhorse" required /></label>
+        <label>Colors<input id="baitColors" type="text" placeholder="Green Pumpkin, Black Blue, White" /></label>
+        <label>Trailers<input id="baitTrailers" type="text" placeholder="Spunk Shad, Dangler, None" /></label>
+        <label>Weights<input id="baitWeights" type="text" placeholder="3/8, 1/2" /></label>
+        <label>Notes<textarea id="baitNotes" placeholder="What makes this bait special?"></textarea></label>
+        <button class="primary" type="submit">Add Bait</button>
+      </form>
+      <div id="baitManagerList"></div>
     </section>
   </main>
 
   <script src="storage.js"></script>
   <script src="trips.js"></script>
+  <script src="baits.js"></script>
   <script src="catches.js"></script>
   <script src="stats.js"></script>
   <script src="ui.js"></script>
