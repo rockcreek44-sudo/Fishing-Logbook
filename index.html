@@ -26,6 +26,7 @@
     <button data-nav="intelligence">Intelligence</button>
     <button data-nav="trip">Trip</button>
     <button data-nav="catch">Catch</button>
+    <button data-nav="logbook">Logbook</button>
     <button data-nav="recommend">Recommend</button>
     <button data-nav="brain">Brain</button>
     <button data-nav="lakebrain">Lake Brain</button>
@@ -61,6 +62,7 @@
       <button class="primary" data-nav="catch">Quick Catch</button>
       <button class="secondary" data-nav="coach">AI Coach</button>
       <button class="secondary" data-nav="intelligence">Fishing Intelligence</button>
+      <button class="secondary" data-nav="logbook">Catch Logbook</button>
       <button class="secondary" data-nav="recommend">What Should I Throw?</button>
       <button class="secondary" data-nav="brain">Fishing Brain</button>
       <button class="secondary" data-nav="trip">Start / Manage Trip</button>
@@ -104,17 +106,23 @@
           </select>
         </label>
         <label>Depth<input id="catchDepth" type="number" step="0.5" placeholder="Optional" /></label>
+        <div class="two-col">
+          <label>Water Temp<input id="catchWaterTemp" type="number" step="0.1" placeholder="Optional" /></label>
+          <label>Wind<input id="catchWind" type="text" placeholder="Optional" /></label>
+        </div>
         <label>Notes<textarea id="catchNotes" placeholder="What did the fish teach you?"></textarea></label>
         <label>Fish Photo<input id="catchPhoto" type="file" accept="image/*" capture="environment" /></label>
         <button id="useLocationButton" class="secondary" type="button">Use Current Location</button>
         <p id="locationStatus" class="small-text">Location not saved.</p>
         <button class="primary" type="submit">Save Catch</button>
+        <button id="saveAndStayButton" class="secondary" type="button">Save + Add Another</button>
       </form>
     </section>
 
     <section id="coach" data-page class="page"><h2>AI Fishing Coach</h2><div id="coachReport"></div></section>
     <section id="mywater" data-page class="page"><h2>My Water</h2><div id="myWaterReport"></div></section>
     <section id="intelligence" data-page class="page"><h2>Fishing Intelligence</h2><div id="intelligenceReport"></div></section>
+    <section id="logbook" data-page class="page"><h2>Catch Logbook</h2><div id="catchLogbook"></div></section>
     <section id="recommend" data-page class="page"><h2>What Should I Throw?</h2><div id="recommendationReport"></div></section>
     <section id="brain" data-page class="page"><h2>Fishing Brain</h2><div id="brainReport"></div></section>
     <section id="lakebrain" data-page class="page"><h2>Lake Brain</h2><div id="lakeBrainReport"></div></section>
@@ -139,19 +147,19 @@
     <section id="photos" data-page class="page"><h2>Catch Photos</h2><div id="photoGallery"></div></section>
   </main>
 
-  <script src="storage.js?v=12"></script>
-  <script src="trips.js?v=12"></script>
-  <script src="baits.js?v=12"></script>
-  <script src="catches.js?v=12"></script>
-  <script src="stats.js?v=12"></script>
-  <script src="patterns.js?v=12"></script>
-  <script src="reports.js?v=12"></script>
-  <script src="recommendations.js?v=12"></script>
-  <script src="brain.js?v=12"></script>
-  <script src="coach.js?v=12"></script>
-  <script src="intelligence.js?v=12"></script>
-  <script src="water.js?v=12"></script>
-  <script src="ui.js?v=12"></script>
-  <script src="app.js?v=12"></script>
+  <script src="storage.js?v=13"></script>
+  <script src="trips.js?v=13"></script>
+  <script src="baits.js?v=13"></script>
+  <script src="catches.js?v=13"></script>
+  <script src="stats.js?v=13"></script>
+  <script src="patterns.js?v=13"></script>
+  <script src="reports.js?v=13"></script>
+  <script src="recommendations.js?v=13"></script>
+  <script src="brain.js?v=13"></script>
+  <script src="coach.js?v=13"></script>
+  <script src="intelligence.js?v=13"></script>
+  <script src="water.js?v=13"></script>
+  <script src="ui.js?v=13"></script>
+  <script src="app.js?v=13"></script>
 </body>
 </html>

@@ -31,3 +31,10 @@ button:active{transform:scale(.98)}@media(max-width:520px){.app-header h1{font-s
 .rank-row{display:flex;align-items:center;gap:12px;border-top:1px solid var(--border);padding-top:12px;margin-top:12px}
 .rank-row div{flex:1}
 .pb-card{border-color:var(--gold);background:linear-gradient(180deg,rgba(202,162,74,.18),rgba(20,32,20,.95))}
+
+.catch-card img{width:100%;border-radius:14px;border:1px solid var(--border);margin:10px 0}
+.catch-actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px}
+.inline-button{border:1px solid var(--border);background:var(--panel-light);color:var(--text);border-radius:12px;padding:10px;font-weight:900}
+.inline-danger{border-color:#7a2525;background:#361616;color:#fff}
+.edit-form{display:flex;flex-direction:column;gap:10px;margin-top:12px;padding-top:12px;border-top:1px solid var(--border)}
+.badge{display:inline-block;border-radius:999px;background:var(--gold-soft);color:var(--gold);padding:4px 9px;font-size:12px;font-weight:900;margin:3px 4px 3px 0}

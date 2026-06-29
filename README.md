@@ -1,11 +1,12 @@
-# 2° Logbook v3 Build 12 - My Water
+# 2° Logbook v3 Build 13 - Smart Catch Logging
 
 Upload all files in this ZIP to the root of your GitHub repository.
 
 What changed:
-- Added My Water tab.
-- Added lake-by-lake dashboards.
-- Added Personal Best card.
-- Added confidence rankings for baits.
-- Added Pattern Timeline from recent catches.
-- Added best bait/color/trailer/cover/month/time per lake.
+- Added Catch Logbook tab.
+- Added Save + Add Another button.
+- Added edit catches.
+- Added delete catches.
+- Added water temp and wind directly to catch logging.
+- Catch cards show bait/color/trailer/cover badges and photos.
+- Smarter catch data feeds the Coach, Intelligence, My Water, and Pattern systems.
