@@ -38,3 +38,10 @@ button:active{transform:scale(.98)}@media(max-width:520px){.app-header h1{font-s
 .inline-danger{border-color:#7a2525;background:#361616;color:#fff}
 .edit-form{display:flex;flex-direction:column;gap:10px;margin-top:12px;padding-top:12px;border-top:1px solid var(--border)}
 .badge{display:inline-block;border-radius:999px;background:var(--gold-soft);color:var(--gold);padding:4px 9px;font-size:12px;font-weight:900;margin:3px 4px 3px 0}
+
+.bag-weight{font-size:64px;font-weight:900;color:var(--gold);line-height:.95}
+.cull-card{border-color:#7a2525;background:linear-gradient(180deg,rgba(122,37,37,.25),rgba(20,32,20,.95))}
+.keep-card{border-color:var(--gold)}
+.bag-list{display:flex;flex-direction:column;gap:10px}
+.bag-fish{display:flex;justify-content:space-between;gap:12px;align-items:center;background:var(--bg-soft);border:1px solid var(--border);border-radius:14px;padding:12px}
+.bag-fish strong{color:var(--gold);font-size:22px}
