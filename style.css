@@ -1,0 +1,468 @@
+/* 2° Logbook - Clean Rebuilt style.css
+   Fresh stylesheet. No old hero/banner/header leftovers.
+*/
+
+:root {
+  --bg: #020805;
+  --bg-soft: #071408;
+  --panel: #102613;
+  --panel-light: #17351b;
+  --border: #2f432f;
+  --gold: #caa24a;
+  --gold-soft: rgba(202, 162, 74, 0.28);
+  --text: #f3f0df;
+  --muted: #aeb8a8;
+  --danger: #7a2525;
+  --red: #b51616;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  background: var(--bg);
+}
+
+body {
+  margin: 0;
+  min-height: 100%;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  color: var(--text);
+  background:
+    radial-gradient(circle at 50% 0%, rgba(202, 162, 74, 0.08), transparent 28%),
+    radial-gradient(circle at 50% 38%, rgba(20, 60, 25, 0.24), transparent 42%),
+    repeating-linear-gradient(115deg, rgba(255,255,255,.018) 0 1px, transparent 1px 9px),
+    linear-gradient(180deg, #020805 0%, #06140a 42%, #020805 100%);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+/* Header: one official logo only */
+#brandHeader37,
+.brand-header-37 {
+  width: 100%;
+  height: 165px;
+  min-height: 165px;
+  max-height: 165px;
+  padding: 10px 12px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 50% 46%, rgba(180, 0, 0, .18), transparent 34%),
+    linear-gradient(180deg, #020805 0%, #071409 100%);
+  border-bottom: 1px solid rgba(202, 162, 74, .26);
+}
+
+#brandLogo37,
+.brand-logo-37 {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 96vw;
+  max-height: 142px;
+  object-fit: contain;
+  object-position: center;
+  margin: 0 auto;
+  transform: none;
+  position: static;
+  filter:
+    drop-shadow(0 0 12px rgba(220, 0, 0, .26))
+    drop-shadow(0 8px 14px rgba(0,0,0,.55));
+}
+
+/* Kill every old branding/header experiment */
+.app-header,
+.clean-brand-header,
+.official-logo-header,
+.official-brand-header,
+.brand-header,
+.brand-hero,
+.brand-hero *,
+.brand-hero-logo,
+.brand-lockup,
+.official-logo-img,
+.official-brand-lockup,
+.clean-brand-logo,
+.clean-brand-title,
+.clean-brand-subtitle,
+.top-brand-logo,
+.brand-title,
+.brand-subtitle {
+  display: none !important;
+  visibility: hidden !important;
+  width: 0 !important;
+  height: 0 !important;
+  max-width: 0 !important;
+  max-height: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  overflow: hidden !important;
+}
+
+/* Navigation */
+.nav-bar {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 12px 12px;
+  background: rgba(2, 9, 5, .92);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-top: 1px solid rgba(202,162,74,.12);
+  border-bottom: 1px solid rgba(202,162,74,.24);
+  box-shadow: 0 10px 24px rgba(0,0,0,.35);
+  -webkit-overflow-scrolling: touch;
+}
+
+.nav-bar::-webkit-scrollbar {
+  display: none;
+}
+
+.nav-bar button {
+  flex: 0 0 auto;
+  border: 1px solid rgba(120, 150, 112, .32);
+  border-radius: 999px;
+  padding: 12px 20px;
+  background: rgba(16, 38, 19, .98);
+  color: var(--text);
+  font-size: 17px;
+  font-weight: 900;
+  white-space: nowrap;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.04);
+}
+
+.nav-bar button.active {
+  background: var(--gold);
+  color: #111;
+  border-color: rgba(202,162,74,.9);
+}
+
+/* Layout */
+main {
+  width: min(920px, 100%);
+  margin: 0 auto;
+  padding: 18px 14px 90px;
+}
+
+.page {
+  display: none;
+}
+
+.page.active {
+  display: block;
+}
+
+.page > h2 {
+  margin: 18px 4px 16px;
+  font-size: 38px;
+  line-height: 1.05;
+  font-weight: 1000;
+  letter-spacing: -0.03em;
+}
+
+.small-text {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* Cards */
+.card,
+.hub-card {
+  width: 100%;
+  border: 1px solid rgba(202,162,74,.22);
+  border-radius: 24px;
+  background: linear-gradient(180deg, rgba(24,54,27,.97), rgba(8,28,13,.97));
+  box-shadow:
+    0 14px 28px rgba(0,0,0,.34),
+    inset 0 1px 0 rgba(255,255,255,.035);
+}
+
+.card {
+  padding: 24px;
+  margin: 0 0 18px;
+}
+
+.card.hero {
+  background: linear-gradient(180deg, rgba(56, 58, 26, .98), rgba(15, 39, 18, .98));
+  border-color: rgba(202,162,74,.72);
+}
+
+.card h2,
+.card h3 {
+  margin: 0 0 12px;
+  font-size: 28px;
+  line-height: 1.08;
+  font-weight: 1000;
+}
+
+.card p {
+  margin: 8px 0;
+  color: var(--muted);
+  font-size: 20px;
+  line-height: 1.35;
+}
+
+.card span {
+  display: block;
+  color: var(--muted);
+  font-size: 16px;
+  font-weight: 900;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.card strong {
+  display: block;
+  margin-top: 12px;
+  color: var(--gold);
+  font-size: 34px;
+  line-height: 1.05;
+  font-weight: 1000;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+}
+
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+.hub-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+
+.hub-card {
+  display: block;
+  text-align: left;
+  padding: 20px;
+  color: var(--text);
+}
+
+.hub-card strong {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--text);
+  font-size: 22px;
+  font-weight: 1000;
+}
+
+.hub-card span {
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.3;
+}
+
+/* Forms */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 900;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  border: 1px solid rgba(120,150,112,.28);
+  border-radius: 16px;
+  padding: 14px 15px;
+  background: rgba(2, 10, 5, .92);
+  color: var(--text);
+  font: inherit;
+  font-size: 18px;
+  outline: none;
+}
+
+textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: rgba(202,162,74,.8);
+  box-shadow: 0 0 0 3px rgba(202,162,74,.12);
+}
+
+/* Buttons */
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+.primary,
+.secondary,
+.danger,
+.back-hub,
+.primary-hub {
+  width: 100%;
+  border: none;
+  border-radius: 18px;
+  padding: 16px 18px;
+  margin: 0 0 12px;
+  font-size: 19px;
+  font-weight: 1000;
+}
+
+.primary,
+.primary-hub {
+  background: var(--gold);
+  color: #101010;
+}
+
+.secondary,
+.back-hub {
+  background: rgba(16, 38, 19, .98);
+  color: var(--text);
+  border: 1px solid rgba(120,150,112,.28);
+}
+
+.danger {
+  background: var(--danger);
+  color: #fff;
+}
+
+/* Reports / generated content */
+#coachReport,
+#tournamentReport,
+#tourneyAIReport,
+#timelineReport,
+#predictorReport,
+#seasonalReport,
+#engineReport,
+#rotationReport,
+#intelligenceReport,
+#myWaterReport,
+#recommendationReport,
+#brainReport,
+#patternReport,
+#lakeBrainReport,
+#tripReport,
+#baitStats,
+#baitManagerList,
+#catchLogbook,
+#tripHistory,
+#photoGallery {
+  color: var(--text);
+}
+
+progress {
+  width: 100%;
+  height: 14px;
+  border: none;
+  border-radius: 999px;
+  overflow: hidden;
+  background: rgba(0,0,0,.38);
+}
+
+progress::-webkit-progress-bar {
+  background: rgba(0,0,0,.38);
+  border-radius: 999px;
+}
+
+progress::-webkit-progress-value {
+  background: var(--gold);
+  border-radius: 999px;
+}
+
+/* Mobile tuning */
+@media (max-width: 520px) {
+  #brandHeader37,
+  .brand-header-37 {
+    height: 155px;
+    min-height: 155px;
+    max-height: 155px;
+    padding: 8px;
+  }
+
+  #brandLogo37,
+  .brand-logo-37 {
+    max-width: 97vw;
+    max-height: 134px;
+  }
+
+  .nav-bar {
+    gap: 8px;
+    padding: 10px 10px;
+  }
+
+  .nav-bar button {
+    padding: 11px 18px;
+    font-size: 16px;
+  }
+
+  main {
+    padding: 16px 12px 90px;
+  }
+
+  .page > h2 {
+    font-size: 34px;
+  }
+
+  .card {
+    padding: 22px;
+    border-radius: 22px;
+  }
+
+  .card h2,
+  .card h3 {
+    font-size: 27px;
+  }
+
+  .card p {
+    font-size: 19px;
+  }
+
+  .card strong {
+    font-size: 32px;
+  }
+}
+
+@media (min-width: 700px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .two-col {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hub-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

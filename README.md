@@ -1,9 +1,14 @@
-# 2° Logbook v3 Build 38 - Larger Official Logo Header
+# Fishing Logbook Build 40 - Clean Foundation
 
-Upload all files in this ZIP to the root of your GitHub repository.
+Upload every file in this ZIP to the root of your GitHub repository.
 
 What changed:
-- Kept the working Build 37 header structure.
-- Made the official logo about 40-45% larger.
-- Increased header height slightly.
-- No other layout or feature changes.
+- Rebuilt style.css from scratch.
+- Removed old stacked header/hero/banner CSS conflicts.
+- Kept one official logo header only.
+- Preserved the existing app features and JavaScript files.
+- Added cache busting for Build 40.
+- This should be the new clean foundation for future builds.
+
+Upload destination:
+https://github.com/rockcreek44-sudo/Fishing-Logbook
