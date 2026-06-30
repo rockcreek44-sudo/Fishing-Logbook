@@ -592,7 +592,7 @@ body::before{
 
 .brand-hero-logo{
   display:block;
-  width:min(92vw, 680px);
+  width:92vw;
   max-height:215px;
   object-fit:contain;
   opacity:.30;
