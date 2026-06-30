@@ -183,7 +183,7 @@ button:active,
     background:
       radial-gradient(circle at center, rgba(202,162,74,.08), transparent 42%),
       url("logo-watermark.png") center 46% / 92vw auto no-repeat;
-    opacity:.05;
+    opacity:.0;
   }
 }
 
