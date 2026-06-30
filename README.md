@@ -1,14 +1,16 @@
-# Fishing Logbook Build 40 - Clean Foundation
+# 2° Logbook v3 Build 37 - Full Header Rewrite
 
-Upload every file in this ZIP to the root of your GitHub repository.
+Upload all files in this ZIP to the root of your GitHub repository.
 
 What changed:
-- Rebuilt style.css from scratch.
-- Removed old stacked header/hero/banner CSS conflicts.
-- Kept one official logo header only.
-- Preserved the existing app features and JavaScript files.
-- Added cache busting for Build 40.
-- This should be the new clean foundation for future builds.
-
-Upload destination:
-https://github.com/rockcreek44-sudo/Fishing-Logbook
+- Fully removed all old app header, hero, banner, and lockup elements from index.html.
+- Added one brand-new header only:
+  <header id="brandHeader37">
+    <img id="brandLogo37" src="brand-header-safe.png">
+  </header>
+- Uses a transparent PNG with object-fit: contain.
+- No CSS background-image for the header.
+- No cover/zoom/crop behavior.
+- Fixed compact header height.
+- Added brand-header-safe.png.
+- Keeps all app features from the previous build.
