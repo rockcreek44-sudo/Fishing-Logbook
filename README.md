@@ -1,16 +1,8 @@
-# 2° Logbook v3 Build 37 - Full Header Rewrite
+# Fishing Logbook Build 38 Stable - Logo Bump
 
-Upload all files in this ZIP to the root of your GitHub repository.
+This build starts from the working Build 37.
 
-What changed:
-- Fully removed all old app header, hero, banner, and lockup elements from index.html.
-- Added one brand-new header only:
-  <header id="brandHeader37">
-    <img id="brandLogo37" src="brand-header-safe.png">
-  </header>
-- Uses a transparent PNG with object-fit: contain.
-- No CSS background-image for the header.
-- No cover/zoom/crop behavior.
-- Fixed compact header height.
-- Added brand-header-safe.png.
-- Keeps all app features from the previous build.
+Only change:
+- Slightly increased the official logo/header size by about 15-20%.
+
+No other app features, navigation, JavaScript, or layout systems were changed.

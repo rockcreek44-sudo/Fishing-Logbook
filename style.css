@@ -1685,3 +1685,37 @@ body::before{
     max-height:106px !important;
   }
 }
+
+/* Build 38 Stable - small logo bump only */
+/* Based on working Build 37. No layout rewrite. */
+#brandHeader37.brand-header-37 {
+  height: 148px !important;
+  min-height: 148px !important;
+  max-height: 148px !important;
+  padding: 8px 10px !important;
+}
+
+#brandLogo37.brand-logo-37 {
+  max-width: 96vw !important;
+  max-height: 128px !important;
+  width: auto !important;
+  height: auto !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  margin: 0 auto !important;
+  transform: none !important;
+}
+
+@media (max-width: 520px) {
+  #brandHeader37.brand-header-37 {
+    height: 144px !important;
+    min-height: 144px !important;
+    max-height: 144px !important;
+    padding: 8px 8px !important;
+  }
+
+  #brandLogo37.brand-logo-37 {
+    max-width: 96vw !important;
+    max-height: 124px !important;
+  }
+}
