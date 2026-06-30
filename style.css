@@ -197,7 +197,7 @@ body::before{
   background:
     radial-gradient(circle at center, rgba(202,162,74,.10), transparent 42%),
     url("logo-watermark.png") center 46% / min(92vw, 760px) auto no-repeat !important;
-  opacity:.105 !important;
+  opacity:.0 !important;
   filter: drop-shadow(0 0 26px rgba(202, 0, 0, .22)) grayscale(.02) saturate(1.25) !important;
 }
 
