@@ -1,8 +1,8 @@
-# Fishing Logbook Build 38 Stable - Logo Bump
+# Fishing Logbook Build 39 Stable - Logo Final Tune
 
-This build starts from the working Build 37.
+Starts from the working Build 38 Stable.
 
-Only change:
-- Slightly increased the official logo/header size by about 15-20%.
-
-No other app features, navigation, JavaScript, or layout systems were changed.
+Only changes:
+- Logo/header slightly larger.
+- Logo lifted slightly higher.
+- No navigation, card, JavaScript, or feature changes.

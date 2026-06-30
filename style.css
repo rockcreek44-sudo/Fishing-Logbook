@@ -1719,3 +1719,38 @@ body::before{
     max-height: 124px !important;
   }
 }
+
+/* Build 39 Stable - final logo tune only */
+/* Slightly larger logo, lifted a little. Nothing else changed. */
+#brandHeader37.brand-header-37 {
+  height: 148px !important;
+  min-height: 148px !important;
+  max-height: 148px !important;
+  padding: 2px 10px 14px !important;
+}
+
+#brandLogo37.brand-logo-37 {
+  max-width: 98vw !important;
+  max-height: 142px !important;
+  width: auto !important;
+  height: auto !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  margin: -10px auto 0 !important;
+  transform: none !important;
+}
+
+@media (max-width: 520px) {
+  #brandHeader37.brand-header-37 {
+    height: 148px !important;
+    min-height: 148px !important;
+    max-height: 148px !important;
+    padding: 2px 8px 14px !important;
+  }
+
+  #brandLogo37.brand-logo-37 {
+    max-width: 98vw !important;
+    max-height: 140px !important;
+    margin: -10px auto 0 !important;
+  }
+}
