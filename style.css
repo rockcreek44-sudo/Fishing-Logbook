@@ -577,7 +577,7 @@ body::before{
 .brand-hero{
   position:relative;
   z-index:1;
-  height:210px;
+  height:260px;
   margin:0;
   overflow:hidden;
   display:flex;
