@@ -596,7 +596,7 @@ body::before{
   max-height:215px;
   object-fit:contain;
   opacity:.30;
-  transform:rotate(-2deg);
+  transform:none;
   filter:
     drop-shadow(0 0 44px rgba(220,0,0,.48))
     drop-shadow(0 0 22px rgba(255,255,255,.12))
